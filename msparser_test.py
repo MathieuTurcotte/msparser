@@ -37,7 +37,8 @@ mem_heap_extra_B=16
 mem_stacks_B=0
 heap_tree=empty"""
 
-DETAILED_SNAPSHOTS = """desc: --time-unit=i
+DETAILED_SNAPSHOTS = """
+desc: --time-unit=i
 cmd: ./memory-run
 time_unit: i
 #-----------
