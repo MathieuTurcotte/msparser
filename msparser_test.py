@@ -3,7 +3,7 @@
 
 from io import StringIO
 from pprint import pprint
-from unittest import TestCase
+from unittest import TestCase, main
 
 import msparser
 
@@ -165,4 +165,4 @@ class MassifParserTest(TestCase):
         self.assertEqual(peak_snapshot_index, 3)
 
 if __name__ == "__main__":
-    unittest.main()
+    main()
