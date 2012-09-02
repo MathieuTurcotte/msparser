@@ -1,0 +1,10 @@
+*~
+*.pyc
+*.pyo
+*.pyt
+*.pytc
+*.egg
+.coverage
+dist/
+build/
+MANIFEST

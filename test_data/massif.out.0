@@ -1,0 +1,155 @@
+desc: --time-unit=ms
+cmd: ./a.out
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=183
+mem_heap_B=1000
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=184
+mem_heap_B=2000
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=184
+mem_heap_B=3000
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=184
+mem_heap_B=4000
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=184
+mem_heap_B=5000
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=184
+mem_heap_B=6000
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=184
+mem_heap_B=7000
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=184
+mem_heap_B=8000
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=184
+mem_heap_B=9000
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n1: 9000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 9000 0x8048457: main (prog.c:22)
+#-----------
+snapshot=10
+#-----------
+time=184
+mem_heap_B=10000
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=184
+mem_heap_B=12000
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=184
+mem_heap_B=16000
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=184
+mem_heap_B=22000
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=184
+mem_heap_B=26000
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=184
+mem_heap_B=32000
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=185
+mem_heap_B=32000
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=peak
+n4: 32000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 12000 0x8048404: h (prog.c:4)
+  n2: 12000 0x804841D: g (prog.c:9)
+   n1: 6000 0x8048436: f (prog.c:14)
+    n0: 6000 0x8048472: main (prog.c:24)
+   n0: 6000 0x8048477: main (prog.c:26)
+ n0: 10000 0x8048457: main (prog.c:22)
+ n2: 8000 0x8048418: g (prog.c:8)
+  n1: 4000 0x8048436: f (prog.c:14)
+   n0: 4000 0x8048472: main (prog.c:24)
+  n0: 4000 0x8048477: main (prog.c:26)
+ n1: 2000 0x8048431: f (prog.c:13)
+  n0: 2000 0x8048472: main (prog.c:24)
+

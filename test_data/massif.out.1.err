@@ -1,0 +1,81 @@
+desc: --time-unit=ms
+cmd: ./memory-run
+time_unit: ms
+#-----------
+snapshot=0
+#-----------
+time=
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=355
+mem_heap_B=29
+mem_heap_extra_B=11
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=368
+mem_heap_B=2668
+mem_heap_extra_B=1020
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=383
+mem_heap_B=2902
+mem_heap_extra_B=522
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=393
+mem_heap_B=18162
+mem_heap_extra_B=7062
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=400
+mem_heap_B=18190
+mem_heap_extra_B=7074
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=411
+mem_heap_B=25974
+mem_heap_extra_B=10410
+mem_stacks_B=0
+heap_tree=detailed
+n6: 25974 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 11116 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 11116 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:)
+   n0: 11116 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 9072 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 9072 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 9072 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 3724 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 3724 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 3724 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 1296 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 1296 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 1296 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 582 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n2: 582 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 486 0x8049C0C: main (memory.cpp:28)
+   n0: 96 in 1 place, below massif's threshold (01.00%)
+ n0: 184 in 3 places, all below massif's threshold (01.00%)

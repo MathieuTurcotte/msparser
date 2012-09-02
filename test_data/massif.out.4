@@ -1,0 +1,922 @@
+desc: --time-unit=B
+cmd: ./memory-run
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=24592
+mem_heap_B=1460
+mem_heap_extra_B=604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=59480
+mem_heap_B=23594
+mem_heap_extra_B=9390
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=95320
+mem_heap_B=48682
+mem_heap_extra_B=20142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=113240
+mem_heap_B=61226
+mem_heap_extra_B=25518
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=143480
+mem_heap_B=82394
+mem_heap_extra_B=34590
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=172344
+mem_heap_B=82582
+mem_heap_extra_B=35218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=204344
+mem_heap_B=60182
+mem_heap_extra_B=25618
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=224904
+mem_heap_B=45790
+mem_heap_extra_B=19450
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=246024
+mem_heap_B=31006
+mem_heap_extra_B=13114
+mem_stacks_B=0
+heap_tree=detailed
+n4: 31006 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 27216 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 27216 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 27216 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 3024 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 3024 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 3024 0x8049C2C: main (memory.cpp:30)
+   n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 582 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n2: 582 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 486 0x8049C0C: main (memory.cpp:28)
+   n0: 96 in 1 place, below massif's threshold (01.00%)
+ n0: 184 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=10
+#-----------
+time=267144
+mem_heap_B=16222
+mem_heap_extra_B=6778
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=290888
+mem_heap_B=2255
+mem_heap_extra_B=249
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=311632
+mem_heap_B=17650
+mem_heap_extra_B=5038
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=332752
+mem_heap_B=32434
+mem_heap_extra_B=11374
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=357552
+mem_heap_B=49794
+mem_heap_extra_B=18814
+mem_stacks_B=0
+heap_tree=detailed
+n6: 49794 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 10892 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 10892 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 10892 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 4096 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 4096 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 4096 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 3640 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 3640 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 3640 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 2118 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n2: 2118 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 1536 0x8049C68: main (memory.cpp:47)
+   n0: 582 in 2 places, all below massif's threshold (01.00%)
+ n0: 376 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=15
+#-----------
+time=393392
+mem_heap_B=74882
+mem_heap_extra_B=29566
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=411312
+mem_heap_B=87426
+mem_heap_extra_B=34942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=429232
+mem_heap_B=99970
+mem_heap_extra_B=40318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=447152
+mem_heap_B=112514
+mem_heap_extra_B=45694
+mem_stacks_B=0
+heap_tree=detailed
+n6: 112514 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 57932 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 57932 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 57932 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 19320 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 19320 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 19320 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 4096 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 4096 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 4096 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 2118 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n1: 2118 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 2118 in 3 places, all below massif's threshold (01.00%)
+ n0: 376 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=19
+#-----------
+time=465072
+mem_heap_B=125058
+mem_heap_extra_B=51070
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=482992
+mem_heap_B=137602
+mem_heap_extra_B=56446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=500912
+mem_heap_B=150146
+mem_heap_extra_B=61822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=518832
+mem_heap_B=162690
+mem_heap_extra_B=67198
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=536752
+mem_heap_B=175234
+mem_heap_extra_B=72574
+mem_stacks_B=0
+heap_tree=detailed
+n5: 175234 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 104972 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 104972 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 104972 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 35000 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 35000 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 35000 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 4096 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 4096 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 4096 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 2494 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=24
+#-----------
+time=554672
+mem_heap_B=187778
+mem_heap_extra_B=77950
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=572592
+mem_heap_B=200322
+mem_heap_extra_B=83326
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=590512
+mem_heap_B=212866
+mem_heap_extra_B=88702
+mem_stacks_B=0
+heap_tree=detailed
+n5: 212866 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 133196 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 133196 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 133196 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 44408 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 44408 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 44408 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 4096 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 4096 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 4096 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 2494 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=27
+#-----------
+time=608432
+mem_heap_B=225410
+mem_heap_extra_B=94078
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=626352
+mem_heap_B=237954
+mem_heap_extra_B=99454
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=644272
+mem_heap_B=250498
+mem_heap_extra_B=104830
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=662192
+mem_heap_B=263042
+mem_heap_extra_B=110206
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=680112
+mem_heap_B=275586
+mem_heap_extra_B=115582
+mem_stacks_B=0
+heap_tree=detailed
+n5: 275586 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 180236 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 180236 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 180236 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 60088 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 60088 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 60088 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 4096 0x804BE0A: DancingLinksSolver::build_cover_matrix(Sudoku&) (new_allocator.h:89)
+  n2: 4096 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 4096 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 2494 in 4 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=32
+#-----------
+time=698032
+mem_heap_B=288130
+mem_heap_extra_B=120958
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=715952
+mem_heap_B=300674
+mem_heap_extra_B=126334
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=733872
+mem_heap_B=313218
+mem_heap_extra_B=131710
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=751792
+mem_heap_B=325762
+mem_heap_extra_B=137086
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=769712
+mem_heap_B=338306
+mem_heap_extra_B=142462
+mem_stacks_B=0
+heap_tree=detailed
+n4: 338306 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 227276 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 227276 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 227276 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 75768 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 75768 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 75768 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 6590 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=37
+#-----------
+time=787632
+mem_heap_B=350850
+mem_heap_extra_B=147838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=805552
+mem_heap_B=363394
+mem_heap_extra_B=153214
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=823472
+mem_heap_B=375938
+mem_heap_extra_B=158590
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=841392
+mem_heap_B=388482
+mem_heap_extra_B=163966
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=859312
+mem_heap_B=401026
+mem_heap_extra_B=169342
+mem_stacks_B=0
+heap_tree=detailed
+n4: 401026 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 274316 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 274316 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 274316 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 91448 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 91448 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 91448 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 6590 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=42
+#-----------
+time=877232
+mem_heap_B=413570
+mem_heap_extra_B=174718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=895152
+mem_heap_B=426114
+mem_heap_extra_B=180094
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=913072
+mem_heap_B=438658
+mem_heap_extra_B=185470
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=930992
+mem_heap_B=451202
+mem_heap_extra_B=190846
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=948912
+mem_heap_B=463746
+mem_heap_extra_B=196222
+mem_stacks_B=0
+heap_tree=detailed
+n4: 463746 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 321356 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 321356 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 321356 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 107128 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 107128 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 107128 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 6590 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=47
+#-----------
+time=966832
+mem_heap_B=476290
+mem_heap_extra_B=201598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=992152
+mem_heap_B=494014
+mem_heap_extra_B=209194
+mem_stacks_B=0
+heap_tree=peak
+n4: 494014 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 344064 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 344064 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 344064 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 114688 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 114688 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 114688 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 28672 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 28672 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 28672 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 6590 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=49
+#-----------
+time=1019056
+mem_heap_B=473958
+mem_heap_extra_B=202346
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1036976
+mem_heap_B=461414
+mem_heap_extra_B=196970
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1054896
+mem_heap_B=448870
+mem_heap_extra_B=191594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1072816
+mem_heap_B=436326
+mem_heap_extra_B=186218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1090736
+mem_heap_B=423782
+mem_heap_extra_B=180842
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1108656
+mem_heap_B=411238
+mem_heap_extra_B=175466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1126576
+mem_heap_B=398694
+mem_heap_extra_B=170090
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1144496
+mem_heap_B=386150
+mem_heap_extra_B=164714
+mem_stacks_B=0
+heap_tree=detailed
+n4: 386150 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 344064 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 344064 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 344064 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 22568 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 22568 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 22568 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 17024 0x804BF7C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:91)
+  n2: 17024 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 17024 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 2494 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=57
+#-----------
+time=1162416
+mem_heap_B=373606
+mem_heap_extra_B=159338
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1180336
+mem_heap_B=361062
+mem_heap_extra_B=153962
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1198256
+mem_heap_B=348518
+mem_heap_extra_B=148586
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1216176
+mem_heap_B=335974
+mem_heap_extra_B=143210
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1234096
+mem_heap_B=323430
+mem_heap_extra_B=137834
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1252016
+mem_heap_B=310886
+mem_heap_extra_B=132458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1269936
+mem_heap_B=298342
+mem_heap_extra_B=127082
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1287856
+mem_heap_B=285798
+mem_heap_extra_B=121706
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1305776
+mem_heap_B=273254
+mem_heap_extra_B=116330
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1323696
+mem_heap_B=260710
+mem_heap_extra_B=110954
+mem_stacks_B=0
+heap_tree=detailed
+n3: 260710 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 243012 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 243012 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 243012 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 15204 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 15204 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 15204 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n0: 2494 in 6 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=67
+#-----------
+time=1341616
+mem_heap_B=248166
+mem_heap_extra_B=105578
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1359536
+mem_heap_B=235622
+mem_heap_extra_B=100202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1377456
+mem_heap_B=223078
+mem_heap_extra_B=94826
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1395376
+mem_heap_B=210534
+mem_heap_extra_B=89450
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1413296
+mem_heap_B=197990
+mem_heap_extra_B=84074
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=1431216
+mem_heap_B=185446
+mem_heap_extra_B=78698
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1449136
+mem_heap_B=172902
+mem_heap_extra_B=73322
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1467056
+mem_heap_B=160358
+mem_heap_extra_B=67946
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1484976
+mem_heap_B=147814
+mem_heap_extra_B=62570
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1502896
+mem_heap_B=135270
+mem_heap_extra_B=57194
+mem_stacks_B=0
+heap_tree=detailed
+n4: 135270 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 124964 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 124964 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 124964 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 7812 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 7812 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 7812 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 2118 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n1: 2118 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 2118 in 3 places, all below massif's threshold (01.00%)
+ n0: 376 in 5 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=77
+#-----------
+time=1520816
+mem_heap_B=122726
+mem_heap_extra_B=51818
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=1538736
+mem_heap_B=110182
+mem_heap_extra_B=46442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=1556656
+mem_heap_B=97638
+mem_heap_extra_B=41066
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=1574576
+mem_heap_B=85094
+mem_heap_extra_B=35690
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=1592496
+mem_heap_B=72550
+mem_heap_extra_B=30314
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=1610416
+mem_heap_B=60006
+mem_heap_extra_B=24938
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=1628336
+mem_heap_B=47462
+mem_heap_extra_B=19562
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=1646256
+mem_heap_B=34918
+mem_heap_extra_B=14186
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=1664176
+mem_heap_B=22374
+mem_heap_extra_B=8810
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=1682096
+mem_heap_B=9830
+mem_heap_extra_B=3434
+mem_stacks_B=0
+heap_tree=detailed
+n5: 9830 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6888 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
+  n2: 6888 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 6888 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 2118 0x804B120: std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&) (new_allocator.h:89)
+  n3: 2118 0x804AA3D: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 1536 0x8049C68: main (memory.cpp:47)
+   n0: 486 0x8049C0C: main (memory.cpp:28)
+   n0: 96 in 1 place, below massif's threshold (01.00%)
+ n1: 448 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
+  n2: 448 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
+   n0: 448 0x8049C88: main (memory.cpp:49)
+   n0: 0 in 2 places, all below massif's threshold (01.00%)
+ n1: 348 0x804B4AA: std::vector<std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >, std::allocator<std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > > >::_M_fill_insert(__gnu_cxx::__normal_iterator<std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >*, std::vector<std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >, std::allocator<std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > > > >, unsigned int, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > const&) (new_allocator.h:89)
+  n2: 348 0x804A9CC: Sudoku::Sudoku(std::string, unsigned short, unsigned short) (stl_vector.h:859)
+   n0: 192 0x8049C68: main (memory.cpp:47)
+   n0: 156 in 2 places, all below massif's threshold (01.00%)
+ n0: 28 in 4 places, all below massif's threshold (01.00%)

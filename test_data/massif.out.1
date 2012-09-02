@@ -1,0 +1,501 @@
+desc: --time-unit=B
+cmd: ./thompson
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1808
+mem_heap_B=164
+mem_heap_extra_B=60
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2832
+mem_heap_B=134
+mem_heap_extra_B=42
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=4096
+mem_heap_B=164
+mem_heap_extra_B=76
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=4880
+mem_heap_B=136
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=6528
+mem_heap_B=136
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=8048
+mem_heap_B=168
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=9144
+mem_heap_B=167
+mem_heap_extra_B=65
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=10552
+mem_heap_B=60
+mem_heap_extra_B=28
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=11600
+mem_heap_B=61
+mem_heap_extra_B=35
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=12816
+mem_heap_B=146
+mem_heap_extra_B=46
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=14032
+mem_heap_B=181
+mem_heap_extra_B=75
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=15000
+mem_heap_B=212
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=16592
+mem_heap_B=29
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=detailed
+n10: 29 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 29 0xA08D04: std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.14)
+  n1: 29 0xA0AF63: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/libstdc++.so.6.0.14)
+   n32: 29 0xA0B703: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.14)
+    n0: 15 0x804CD5B: main (thompson.cpp:776)
+    n0: 14 0x804CD39: main (thompson.cpp:776)
+    n0: 0 0x804C47E: main (thompson.cpp:755)
+    n0: 0 0x804C4A0: main (thompson.cpp:755)
+    n0: 0 0x804C513: main (thompson.cpp:756)
+    n0: 0 0x804C535: main (thompson.cpp:756)
+    n0: 0 0x804C5A8: main (thompson.cpp:757)
+    n0: 0 0x804C5CA: main (thompson.cpp:757)
+    n0: 0 0x804C63D: main (thompson.cpp:758)
+    n0: 0 0x804C65F: main (thompson.cpp:758)
+    n0: 0 0x804C6D2: main (thompson.cpp:759)
+    n0: 0 0x804C6F4: main (thompson.cpp:759)
+    n0: 0 0x804C767: main (thompson.cpp:760)
+    n0: 0 0x804C789: main (thompson.cpp:760)
+    n0: 0 0x804C7FC: main (thompson.cpp:763)
+    n0: 0 0x804C81E: main (thompson.cpp:763)
+    n0: 0 0x804C891: main (thompson.cpp:764)
+    n0: 0 0x804C8B3: main (thompson.cpp:764)
+    n0: 0 0x804C926: main (thompson.cpp:765)
+    n0: 0 0x804C948: main (thompson.cpp:765)
+    n0: 0 0x804C9BB: main (thompson.cpp:766)
+    n0: 0 0x804C9DD: main (thompson.cpp:766)
+    n0: 0 0x804CA72: main (thompson.cpp:769)
+    n0: 0 0x804CAE5: main (thompson.cpp:770)
+    n0: 0 0x804CB07: main (thompson.cpp:770)
+    n0: 0 0x804CB7A: main (thompson.cpp:771)
+    n0: 0 0x804CB9C: main (thompson.cpp:771)
+    n0: 0 0x804CC0F: main (thompson.cpp:772)
+    n0: 0 0x804CC31: main (thompson.cpp:772)
+    n0: 0 0x804CCC6: main (thompson.cpp:775)
+    n0: 0 0x804C3F6: main (thompson.cpp:754)
+    n0: 0 0x804C411: main (thompson.cpp:754)
+  n1: 0 0xA08FE6: std::string::_M_mutate(unsigned int, unsigned int, unsigned int) (in /usr/lib/libstdc++.so.6.0.14)
+   n2: 0 0xA09CDD: std::string::_M_leak_hard() (in /usr/lib/libstdc++.so.6.0.14)
+    n1: 0 0x8054A37: thompson::RegexParser::parse(std::string const&) (basic_string.h:303)
+     n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+      n0: 0 0x804C425: main (thompson.cpp:754)
+      n0: 0 0x804C4C2: main (thompson.cpp:755)
+      n0: 0 0x804C557: main (thompson.cpp:756)
+      n0: 0 0x804C5EC: main (thompson.cpp:757)
+      n0: 0 0x804C681: main (thompson.cpp:758)
+      n0: 0 0x804C716: main (thompson.cpp:759)
+      n0: 0 0x804C7AB: main (thompson.cpp:760)
+      n0: 0 0x804C840: main (thompson.cpp:763)
+      n0: 0 0x804C8D5: main (thompson.cpp:764)
+      n0: 0 0x804C96A: main (thompson.cpp:765)
+      n0: 0 0x804C9FF: main (thompson.cpp:766)
+      n0: 0 0x804CA94: main (thompson.cpp:769)
+      n0: 0 0x804CB29: main (thompson.cpp:770)
+      n0: 0 0x804CBBE: main (thompson.cpp:771)
+      n0: 0 0x804CC53: main (thompson.cpp:772)
+      n0: 0 0x804CCE8: main (thompson.cpp:775)
+      n0: 0 0x804CD7D: main (thompson.cpp:776)
+    n1: 0 0x8051579: thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*) (basic_string.h:303)
+     n15: 0 0x804BEF5: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:303)
+      n0: 0 0x804C425: main (thompson.cpp:754)
+      n0: 0 0x804C4C2: main (thompson.cpp:755)
+      n0: 0 0x804C557: main (thompson.cpp:756)
+      n0: 0 0x804C5EC: main (thompson.cpp:757)
+      n0: 0 0x804C681: main (thompson.cpp:758)
+      n0: 0 0x804C716: main (thompson.cpp:759)
+      n0: 0 0x804C7AB: main (thompson.cpp:760)
+      n0: 0 0x804C840: main (thompson.cpp:763)
+      n0: 0 0x804C8D5: main (thompson.cpp:764)
+      n0: 0 0x804C96A: main (thompson.cpp:765)
+      n0: 0 0x804C9FF: main (thompson.cpp:766)
+      n0: 0 0x804CB29: main (thompson.cpp:770)
+      n0: 0 0x804CBBE: main (thompson.cpp:771)
+      n0: 0 0x804CC53: main (thompson.cpp:772)
+      n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n1: 0 0x80547F6: thompson::RegexParser::parse(std::string const&) (thompson.cpp:192)
+  n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+   n0: 0 0x804C425: main (thompson.cpp:754)
+   n0: 0 0x804C4C2: main (thompson.cpp:755)
+   n0: 0 0x804C557: main (thompson.cpp:756)
+   n0: 0 0x804C5EC: main (thompson.cpp:757)
+   n0: 0 0x804C681: main (thompson.cpp:758)
+   n0: 0 0x804C716: main (thompson.cpp:759)
+   n0: 0 0x804C7AB: main (thompson.cpp:760)
+   n0: 0 0x804C840: main (thompson.cpp:763)
+   n0: 0 0x804C8D5: main (thompson.cpp:764)
+   n0: 0 0x804C96A: main (thompson.cpp:765)
+   n0: 0 0x804C9FF: main (thompson.cpp:766)
+   n0: 0 0x804CA94: main (thompson.cpp:769)
+   n0: 0 0x804CB29: main (thompson.cpp:770)
+   n0: 0 0x804CBBE: main (thompson.cpp:771)
+   n0: 0 0x804CC53: main (thompson.cpp:772)
+   n0: 0 0x804CCE8: main (thompson.cpp:775)
+   n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n1: 0 0x805117E: void std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> >::_M_insert_aux<thompson::internal::State**>(__gnu_cxx::__normal_iterator<thompson::internal::State***, std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> > >, thompson::internal::State**&&) (new_allocator.h:89)
+  n2: 0 0x8051296: void std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> >::emplace_back<thompson::internal::State**>(thompson::internal::State**&&) (vector.tcc:100)
+   n2: 0 0x8053BD0: thompson::RegexParser::parse_atome() (stl_vector.h:755)
+    n2: 0 0x8051B7C: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+     n2: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+      n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+       n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+        n0: 0 0x804C425: main (thompson.cpp:754)
+        n0: 0 0x804C4C2: main (thompson.cpp:755)
+        n0: 0 0x804C557: main (thompson.cpp:756)
+        n0: 0 0x804C5EC: main (thompson.cpp:757)
+        n0: 0 0x804C681: main (thompson.cpp:758)
+        n0: 0 0x804C716: main (thompson.cpp:759)
+        n0: 0 0x804C7AB: main (thompson.cpp:760)
+        n0: 0 0x804C840: main (thompson.cpp:763)
+        n0: 0 0x804C8D5: main (thompson.cpp:764)
+        n0: 0 0x804C96A: main (thompson.cpp:765)
+        n0: 0 0x804C9FF: main (thompson.cpp:766)
+        n0: 0 0x804CA94: main (thompson.cpp:769)
+        n0: 0 0x804CB29: main (thompson.cpp:770)
+        n0: 0 0x804CBBE: main (thompson.cpp:771)
+        n0: 0 0x804CC53: main (thompson.cpp:772)
+        n0: 0 0x804CCE8: main (thompson.cpp:775)
+        n0: 0 0x804CD7D: main (thompson.cpp:776)
+      n1: 0 0x8053D4D: thompson::RegexParser::parse_atome() (thompson.cpp:601)
+       n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+        n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+         n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+          n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+           n0: 0 0x804C425: main (thompson.cpp:754)
+           n0: 0 0x804C4C2: main (thompson.cpp:755)
+           n0: 0 0x804C557: main (thompson.cpp:756)
+           n0: 0 0x804C5EC: main (thompson.cpp:757)
+           n0: 0 0x804C681: main (thompson.cpp:758)
+           n0: 0 0x804C716: main (thompson.cpp:759)
+           n0: 0 0x804C7AB: main (thompson.cpp:760)
+     n1: 0 0x8053881: thompson::RegexParser::parse_regexp() (thompson.cpp:548)
+      n1: 0 0x8053D4D: thompson::RegexParser::parse_atome() (thompson.cpp:601)
+       n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+        n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+         n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+          n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+           n0: 0 0x804C425: main (thompson.cpp:754)
+           n0: 0 0x804C4C2: main (thompson.cpp:755)
+           n0: 0 0x804C557: main (thompson.cpp:756)
+           n0: 0 0x804C5EC: main (thompson.cpp:757)
+           n0: 0 0x804C681: main (thompson.cpp:758)
+           n0: 0 0x804C716: main (thompson.cpp:759)
+           n0: 0 0x804C7AB: main (thompson.cpp:760)
+    n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+     n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+      n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+       n11: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+        n0: 0 0x804C425: main (thompson.cpp:754)
+        n0: 0 0x804C4C2: main (thompson.cpp:755)
+        n0: 0 0x804C557: main (thompson.cpp:756)
+        n0: 0 0x804C5EC: main (thompson.cpp:757)
+        n0: 0 0x804C681: main (thompson.cpp:758)
+        n0: 0 0x804C716: main (thompson.cpp:759)
+        n0: 0 0x804C7AB: main (thompson.cpp:760)
+        n0: 0 0x804C840: main (thompson.cpp:763)
+        n0: 0 0x804C8D5: main (thompson.cpp:764)
+        n0: 0 0x804C96A: main (thompson.cpp:765)
+        n0: 0 0x804C9FF: main (thompson.cpp:766)
+   n1: 0 0x805238F: thompson::RegexParser::parse_branch() (stl_vector.h:755)
+    n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+     n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+      n2: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+       n0: 0 0x804CCE8: main (thompson.cpp:775)
+       n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n3: 0 0x8050C14: std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> >::operator=(std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> > const&) (new_allocator.h:89)
+  n2: 0 0x8053BEA: thompson::RegexParser::parse_atome() (thompson.cpp:357)
+   n2: 0 0x8051B7C: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+    n2: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+     n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+      n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+       n0: 0 0x804C425: main (thompson.cpp:754)
+       n0: 0 0x804C4C2: main (thompson.cpp:755)
+       n0: 0 0x804C557: main (thompson.cpp:756)
+       n0: 0 0x804C5EC: main (thompson.cpp:757)
+       n0: 0 0x804C681: main (thompson.cpp:758)
+       n0: 0 0x804C716: main (thompson.cpp:759)
+       n0: 0 0x804C7AB: main (thompson.cpp:760)
+       n0: 0 0x804C840: main (thompson.cpp:763)
+       n0: 0 0x804C8D5: main (thompson.cpp:764)
+       n0: 0 0x804C96A: main (thompson.cpp:765)
+       n0: 0 0x804C9FF: main (thompson.cpp:766)
+       n0: 0 0x804CA94: main (thompson.cpp:769)
+       n0: 0 0x804CB29: main (thompson.cpp:770)
+       n0: 0 0x804CBBE: main (thompson.cpp:771)
+       n0: 0 0x804CC53: main (thompson.cpp:772)
+       n0: 0 0x804CCE8: main (thompson.cpp:775)
+       n0: 0 0x804CD7D: main (thompson.cpp:776)
+     n1: 0 0x8053D4D: thompson::RegexParser::parse_atome() (thompson.cpp:601)
+      n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+       n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+        n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+         n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+          n0: 0 0x804C425: main (thompson.cpp:754)
+          n0: 0 0x804C4C2: main (thompson.cpp:755)
+          n0: 0 0x804C557: main (thompson.cpp:756)
+          n0: 0 0x804C5EC: main (thompson.cpp:757)
+          n0: 0 0x804C681: main (thompson.cpp:758)
+          n0: 0 0x804C716: main (thompson.cpp:759)
+          n0: 0 0x804C7AB: main (thompson.cpp:760)
+    n1: 0 0x8053881: thompson::RegexParser::parse_regexp() (thompson.cpp:548)
+     n1: 0 0x8053D4D: thompson::RegexParser::parse_atome() (thompson.cpp:601)
+      n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+       n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+        n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+         n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+          n0: 0 0x804C425: main (thompson.cpp:754)
+          n0: 0 0x804C4C2: main (thompson.cpp:755)
+          n0: 0 0x804C557: main (thompson.cpp:756)
+          n0: 0 0x804C5EC: main (thompson.cpp:757)
+          n0: 0 0x804C681: main (thompson.cpp:758)
+          n0: 0 0x804C716: main (thompson.cpp:759)
+          n0: 0 0x804C7AB: main (thompson.cpp:760)
+   n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+    n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+     n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+      n11: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+       n0: 0 0x804C425: main (thompson.cpp:754)
+       n0: 0 0x804C4C2: main (thompson.cpp:755)
+       n0: 0 0x804C557: main (thompson.cpp:756)
+       n0: 0 0x804C5EC: main (thompson.cpp:757)
+       n0: 0 0x804C681: main (thompson.cpp:758)
+       n0: 0 0x804C716: main (thompson.cpp:759)
+       n0: 0 0x804C7AB: main (thompson.cpp:760)
+       n0: 0 0x804C840: main (thompson.cpp:763)
+       n0: 0 0x804C8D5: main (thompson.cpp:764)
+       n0: 0 0x804C96A: main (thompson.cpp:765)
+       n0: 0 0x804C9FF: main (thompson.cpp:766)
+  n1: 0 0x8053D67: thompson::RegexParser::parse_atome() (thompson.cpp:357)
+   n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+    n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+     n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+      n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+       n0: 0 0x804C425: main (thompson.cpp:754)
+       n0: 0 0x804C4C2: main (thompson.cpp:755)
+       n0: 0 0x804C557: main (thompson.cpp:756)
+       n0: 0 0x804C5EC: main (thompson.cpp:757)
+       n0: 0 0x804C681: main (thompson.cpp:758)
+       n0: 0 0x804C716: main (thompson.cpp:759)
+       n0: 0 0x804C7AB: main (thompson.cpp:760)
+  n1: 0 0x8051C30: thompson::RegexParser::parse_branch() (thompson.cpp:388)
+   n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+    n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+     n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+      n0: 0 0x804C425: main (thompson.cpp:754)
+      n0: 0 0x804C4C2: main (thompson.cpp:755)
+      n0: 0 0x804C557: main (thompson.cpp:756)
+      n0: 0 0x804C5EC: main (thompson.cpp:757)
+      n0: 0 0x804C681: main (thompson.cpp:758)
+      n0: 0 0x804C716: main (thompson.cpp:759)
+      n0: 0 0x804C7AB: main (thompson.cpp:760)
+ n1: 0 0x8050E6E: void std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> >::_M_insert_aux<thompson::internal::State** const&>(__gnu_cxx::__normal_iterator<thompson::internal::State***, std::vector<thompson::internal::State**, std::allocator<thompson::internal::State**> > >, thompson::internal::State** const&&&) (new_allocator.h:89)
+  n1: 0 0x8053999: thompson::RegexParser::parse_regexp() (stl_vector.h:749)
+   n1: 0 0x8053D4D: thompson::RegexParser::parse_atome() (thompson.cpp:601)
+    n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+     n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+      n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+       n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+        n0: 0 0x804C425: main (thompson.cpp:754)
+        n0: 0 0x804C4C2: main (thompson.cpp:755)
+        n0: 0 0x804C557: main (thompson.cpp:756)
+        n0: 0 0x804C5EC: main (thompson.cpp:757)
+        n0: 0 0x804C681: main (thompson.cpp:758)
+        n0: 0 0x804C716: main (thompson.cpp:759)
+        n0: 0 0x804C7AB: main (thompson.cpp:760)
+ n1: 0 0x80540E3: thompson::RegexParser::parse_atome() (thompson.cpp:249)
+  n1: 0 0x8051BCE: thompson::RegexParser::parse_branch() (thompson.cpp:574)
+   n1: 0 0x8053849: thompson::RegexParser::parse_regexp() (thompson.cpp:545)
+    n1: 0 0x80548C8: thompson::RegexParser::parse(std::string const&) (thompson.cpp:509)
+     n7: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+      n0: 0 0x804C425: main (thompson.cpp:754)
+      n0: 0 0x804C4C2: main (thompson.cpp:755)
+      n0: 0 0x804C557: main (thompson.cpp:756)
+      n0: 0 0x804C5EC: main (thompson.cpp:757)
+      n0: 0 0x804C681: main (thompson.cpp:758)
+      n0: 0 0x804C716: main (thompson.cpp:759)
+      n0: 0 0x804C7AB: main (thompson.cpp:760)
+ n1: 0 0x8054945: thompson::RegexParser::parse(std::string const&) (thompson.cpp:487)
+  n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+   n0: 0 0x804C425: main (thompson.cpp:754)
+   n0: 0 0x804C4C2: main (thompson.cpp:755)
+   n0: 0 0x804C557: main (thompson.cpp:756)
+   n0: 0 0x804C5EC: main (thompson.cpp:757)
+   n0: 0 0x804C681: main (thompson.cpp:758)
+   n0: 0 0x804C716: main (thompson.cpp:759)
+   n0: 0 0x804C7AB: main (thompson.cpp:760)
+   n0: 0 0x804C840: main (thompson.cpp:763)
+   n0: 0 0x804C8D5: main (thompson.cpp:764)
+   n0: 0 0x804C96A: main (thompson.cpp:765)
+   n0: 0 0x804C9FF: main (thompson.cpp:766)
+   n0: 0 0x804CA94: main (thompson.cpp:769)
+   n0: 0 0x804CB29: main (thompson.cpp:770)
+   n0: 0 0x804CBBE: main (thompson.cpp:771)
+   n0: 0 0x804CC53: main (thompson.cpp:772)
+   n0: 0 0x804CCE8: main (thompson.cpp:775)
+   n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n1: 0 0x8054989: thompson::RegexParser::parse(std::string const&) (shared_ptr_base.h:244)
+  n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+   n0: 0 0x804C425: main (thompson.cpp:754)
+   n0: 0 0x804C4C2: main (thompson.cpp:755)
+   n0: 0 0x804C557: main (thompson.cpp:756)
+   n0: 0 0x804C5EC: main (thompson.cpp:757)
+   n0: 0 0x804C681: main (thompson.cpp:758)
+   n0: 0 0x804C716: main (thompson.cpp:759)
+   n0: 0 0x804C7AB: main (thompson.cpp:760)
+   n0: 0 0x804C840: main (thompson.cpp:763)
+   n0: 0 0x804C8D5: main (thompson.cpp:764)
+   n0: 0 0x804C96A: main (thompson.cpp:765)
+   n0: 0 0x804C9FF: main (thompson.cpp:766)
+   n0: 0 0x804CA94: main (thompson.cpp:769)
+   n0: 0 0x804CB29: main (thompson.cpp:770)
+   n0: 0 0x804CBBE: main (thompson.cpp:771)
+   n0: 0 0x804CC53: main (thompson.cpp:772)
+   n0: 0 0x804CCE8: main (thompson.cpp:775)
+   n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n1: 0 0x80512CB: std::_Rb_tree<thompson::internal::State const*, thompson::internal::State const*, std::_Identity<thompson::internal::State const*>, std::less<thompson::internal::State const*>, std::allocator<thompson::internal::State const*> >::_M_insert_(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*, thompson::internal::State const* const&) (new_allocator.h:89)
+  n2: 0 0x80513E7: std::_Rb_tree<thompson::internal::State const*, thompson::internal::State const*, std::_Identity<thompson::internal::State const*>, std::less<thompson::internal::State const*>, std::allocator<thompson::internal::State const*> >::_M_insert_unique(thompson::internal::State const* const&) (stl_tree.h:1196)
+   n1: 0 0x80514AE: thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*) (stl_set.h:408)
+    n17: 0 0x804BEF5: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:303)
+     n0: 0 0x804C425: main (thompson.cpp:754)
+     n0: 0 0x804C4C2: main (thompson.cpp:755)
+     n0: 0 0x804C557: main (thompson.cpp:756)
+     n0: 0 0x804C5EC: main (thompson.cpp:757)
+     n0: 0 0x804C681: main (thompson.cpp:758)
+     n0: 0 0x804C716: main (thompson.cpp:759)
+     n0: 0 0x804C7AB: main (thompson.cpp:760)
+     n0: 0 0x804C840: main (thompson.cpp:763)
+     n0: 0 0x804C8D5: main (thompson.cpp:764)
+     n0: 0 0x804C96A: main (thompson.cpp:765)
+     n0: 0 0x804C9FF: main (thompson.cpp:766)
+     n0: 0 0x804CA94: main (thompson.cpp:769)
+     n0: 0 0x804CB29: main (thompson.cpp:770)
+     n0: 0 0x804CBBE: main (thompson.cpp:771)
+     n0: 0 0x804CC53: main (thompson.cpp:772)
+     n0: 0 0x804CCE8: main (thompson.cpp:775)
+     n0: 0 0x804CD7D: main (thompson.cpp:776)
+   n2: 0 0x8051445: thompson::ThompsonAlgorithm::visit_transition(thompson::internal::Transition const*) (stl_set.h:408)
+    n1: 0 0x80514FF: thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*) (thompson.cpp:666)
+     n9: 0 0x804BEF5: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:303)
+      n0: 0 0x804C425: main (thompson.cpp:754)
+      n0: 0 0x804C4C2: main (thompson.cpp:755)
+      n0: 0 0x804C5EC: main (thompson.cpp:757)
+      n0: 0 0x804C681: main (thompson.cpp:758)
+      n0: 0 0x804C716: main (thompson.cpp:759)
+      n0: 0 0x804C7AB: main (thompson.cpp:760)
+      n0: 0 0x804C840: main (thompson.cpp:763)
+      n0: 0 0x804C8D5: main (thompson.cpp:764)
+      n0: 0 0x804C96A: main (thompson.cpp:765)
+    n1: 0 0x805040E: thompson::ThompsonAlgorithm::visit_split(thompson::internal::Split const*) (thompson.cpp:685)
+     n1: 0 0x80514FF: thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*) (thompson.cpp:666)
+      n9: 0 0x804BEF5: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:303)
+       n0: 0 0x804C425: main (thompson.cpp:754)
+       n0: 0 0x804C681: main (thompson.cpp:758)
+       n0: 0 0x804C716: main (thompson.cpp:759)
+       n0: 0 0x804C8D5: main (thompson.cpp:764)
+       n0: 0 0x804C96A: main (thompson.cpp:765)
+       n0: 0 0x804CB29: main (thompson.cpp:770)
+       n0: 0 0x804CBBE: main (thompson.cpp:771)
+       n0: 0 0x804CC53: main (thompson.cpp:772)
+       n0: 0 0x804CD7D: main (thompson.cpp:776)
+ n1: 0 0x80547B4: thompson::RegexParser::parse(std::string const&) (new_allocator.h:89)
+  n17: 0 0x804BE72: regex_test(std::string const&, std::string const&, bool) (thompson.cpp:731)
+   n0: 0 0x804C425: main (thompson.cpp:754)
+   n0: 0 0x804C4C2: main (thompson.cpp:755)
+   n0: 0 0x804C557: main (thompson.cpp:756)
+   n0: 0 0x804C5EC: main (thompson.cpp:757)
+   n0: 0 0x804C681: main (thompson.cpp:758)
+   n0: 0 0x804C716: main (thompson.cpp:759)
+   n0: 0 0x804C7AB: main (thompson.cpp:760)
+   n0: 0 0x804C840: main (thompson.cpp:763)
+   n0: 0 0x804C8D5: main (thompson.cpp:764)
+   n0: 0 0x804C96A: main (thompson.cpp:765)
+   n0: 0 0x804C9FF: main (thompson.cpp:766)
+   n0: 0 0x804CA94: main (thompson.cpp:769)
+   n0: 0 0x804CB29: main (thompson.cpp:770)
+   n0: 0 0x804CBBE: main (thompson.cpp:771)
+   n0: 0 0x804CC53: main (thompson.cpp:772)
+   n0: 0 0x804CCE8: main (thompson.cpp:775)
+   n0: 0 0x804CD7D: main (thompson.cpp:776)
+#-----------
+snapshot=14
+#-----------
+time=18328
+mem_heap_B=140
+mem_heap_extra_B=44
+mem_stacks_B=0
+heap_tree=empty
+
