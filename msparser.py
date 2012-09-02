@@ -6,6 +6,7 @@ The msparser module offers a simple interface to parse the Valgrind massif.out
 file format, i.e. data files produced the Valgrind heap profiler.
 """
 
+from __future__ import with_statement  # Enable with statement in Python 2.5.
 import re
 
 __all__ = ["parse", "parse_file"]
