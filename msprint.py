@@ -21,7 +21,7 @@ def inst_unit_scaling(peak):
     """
 
     unit_table = [
-        (2 ** 0,  'i'),
+        (2 ** 0, 'i'),
         (2 ** 10, 'ki'),
         (2 ** 20, 'Mi'),
         (2 ** 30, 'Gi'),
@@ -58,7 +58,7 @@ def memory_unit_scaling(peak):
     """
 
     unit_table = [
-        (2 ** 0,  'bytes (B)'),
+        (2 ** 0, 'bytes (B)'),
         (2 ** 10, 'kibibytes (KiB)'),
         (2 ** 20, 'mebibytes (MiB)'),
         (2 ** 30, 'gibibytes (GiB)'),
