@@ -17,7 +17,7 @@ setup(
     long_description=read('README.rst'),
     author='Mathieu Turcotte',
     author_email='turcotte.mat@gmail.com',
-    url='http://mathieuturcotte.ca/',
+    url='https://github.com/MathieuTurcotte/msparser',
     keywords=["valgrind", "massif", "parser"],
     classifiers=[
         "Programming Language :: Python",
