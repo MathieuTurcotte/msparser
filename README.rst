@@ -115,12 +115,3 @@ The output should looks like this::
       8     184     8000    64      8064    0
       9     184     9000    72      9072    0
 
-Changelog
----------
-
-* 1.1 [2011-01-13]
-  - cleaned up exception throwing code
-  - fixed and refactored some regular expressions
-
-* 1.0 [2011-01-11]
-  - initial release
