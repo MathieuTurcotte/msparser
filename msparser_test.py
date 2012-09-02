@@ -1,8 +1,6 @@
 # Copyright (c) 2011 Mathieu Turcotte
 # Licensed under the MIT license.
 
-from io import StringIO
-from pprint import pprint
 from unittest import TestCase, main
 
 import msparser
@@ -107,10 +105,22 @@ mem_stacks_B=0
 heap_tree=empty"""
 
 
+class MockFile():
+    def __init__(self, content):
+        self.lines = content.split("\n")
+        self.index = 0
+
+    def readline(self):
+        if len(self.lines) > self.index:
+            line = self.lines[self.index]
+            self.index += 1
+            return line + "\n"
+        else:
+            return ""
+
+
 def parse(content):
-    try: content = unicode(content)
-    except NameError: pass
-    fd = StringIO(content)
+    fd = MockFile(content)
     return msparser.parse(fd)
 
 
