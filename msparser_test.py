@@ -162,7 +162,7 @@ class MassifParserTest(TestCase):
 
         # Check root's first child.
         root_children = sorted(root["children"], key=lambda x: x["nbytes"],
-                reverse=True)
+                               reverse=True)
         first_root_child = root_children[0]
         self.assertEqual(first_root_child["nbytes"], 50456)
         self.assertEqual(first_root_child["details"], {

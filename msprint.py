@@ -189,12 +189,12 @@ def parse_args():
                                       usage=usage, version=version)
 
     argparser.add_option('-o', '--output',
-                          dest="output",
-                          default='table',
-                          choices=['json', 'gnuplot', 'table', 'graphviz'],
-                          metavar="F",
-                          help="specify the output format: "
-                               "json, gnuplot, graphviz or table")
+                         dest="output",
+                         default='table',
+                         choices=['json', 'gnuplot', 'table', 'graphviz'],
+                         metavar="F",
+                         help="specify the output format: "
+                              "json, gnuplot, graphviz or table")
 
     json_group = optparse.OptionGroup(argparser, "JSON Options")
     json_group.add_option('-i', '--indent',
@@ -205,32 +205,33 @@ def parse_args():
 
     graphviz_group = optparse.OptionGroup(argparser, "Graphviz Options")
     graphviz_group.add_option('--snapshot',
-                          type='int',
-                          dest="snapshot",
-                          metavar='ID',
-                          help="output Graphviz script for a given snapshot")
+                              type='int',
+                              dest="snapshot",
+                              metavar='ID',
+                              help="output Graphviz script for a given "
+                                   "snapshot")
     argparser.add_option_group(graphviz_group)
 
     gnuplot_group = optparse.OptionGroup(argparser, "GNUPlot Options")
     gnuplot_group.add_option('-f', '--format',
-                          dest="format",
-                          default='png',
-                          choices=['png', 'gif', 'jpeg'],
-                          metavar="F",
-                          help="specify the plot output format: "
-                               "png, jpeg or gif")
+                             dest="format",
+                             default='png',
+                             choices=['png', 'gif', 'jpeg'],
+                             metavar="F",
+                             help="specify the plot output format: "
+                                  "png, jpeg or gif")
     gnuplot_group.add_option('-x', '--xsize',
-                          type='int',
-                          dest="xsize",
-                          default=1024,
-                          metavar="X",
-                          help="plot horizontal size")
+                             type='int',
+                             dest="xsize",
+                             default=1024,
+                             metavar="X",
+                             help="plot horizontal size")
     gnuplot_group.add_option('-y', '--ysize',
-                          type='int',
-                          dest="ysize",
-                          default=768,
-                          metavar="Y",
-                          help="plot vertical size")
+                             type='int',
+                             dest="ysize",
+                             default=768,
+                             metavar="Y",
+                             help="plot vertical size")
     argparser.add_option_group(gnuplot_group)
 
     # - options contains optional arguments
@@ -241,7 +242,7 @@ def parse_args():
         argparser.error("No input file !")
 
     for path in args[0:]:
-        if os.path.isfile(path) == False:
+        if os.path.isfile(path) is False:
             argparser.error(path)
 
     return (options, args)
@@ -257,7 +258,8 @@ def main():
                 print_as_json(mdata, options.indent)
             elif options.output == 'gnuplot':
                 print_gnuplot_script(mdata, os.path.basename(path),
-                        options.format, options.xsize, options.ysize)
+                                     options.format, options.xsize,
+                                     options.ysize)
             elif options.output == 'table':
                 print_gnuplot_dtable(mdata)
 

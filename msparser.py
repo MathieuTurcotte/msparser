@@ -106,8 +106,7 @@ def _match_unconditional(regex, string):
     # If we have no match, it's an error.
     if match is None:
         raise ParseError("".join(["can't match '", string, "' against '",
-            regex.pattern, "'"]))
-
+                         regex.pattern, "'"]))
     return match
 
 
