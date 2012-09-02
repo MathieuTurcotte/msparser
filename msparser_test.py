@@ -139,7 +139,7 @@ class MassifParserTest(TestCase):
         self.assertEqual(snapshot["mem_heap"], 2000, "mem_heap")
         self.assertEqual(snapshot["mem_heap_extra"], 16, "mem_heap_extra")
         self.assertEqual(snapshot["mem_stack"], 0, "mem_stack")
-        self.assertIsNone(snapshot["heap_tree"], "heap_tree")
+        self.assertEqual(snapshot["heap_tree"], None, "heap_tree")
 
     def test_parse_snapshot_heap_tree(self):
         data = parse(DETAILED_SNAPSHOTS)
