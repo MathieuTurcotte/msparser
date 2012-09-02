@@ -5,9 +5,7 @@ python:
   - "2.7"
   - "3.1"
   - "3.2"
-
 script: python msparser_test.py
-
 notifications:
   email:
     - turcotte.mat@gmail.com
