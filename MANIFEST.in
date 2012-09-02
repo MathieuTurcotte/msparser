@@ -1,4 +1,4 @@
-include LICENSE*
-include README*
-include msparser*
-include test_data/*
+include LICENSE
+include README.rst
+include msparser.py
+include msparser_test.py
