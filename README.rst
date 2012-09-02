@@ -115,3 +115,7 @@ The output should looks like this::
       8     184     8000    64      8064    0
       9     184     9000    72      9072    0
 
+License
+-------
+
+This code is free to use under the terms of the `MIT license <http://mturcotte.mit-license.org/>`_.
