@@ -107,6 +107,8 @@ heap_tree=empty"""
 
 
 def parse(content):
+    try: content = unicode(content)
+    except NameError: pass
     fd = StringIO(content)
     return msparser.parse(fd)
 
