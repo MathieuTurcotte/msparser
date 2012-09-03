@@ -21,13 +21,13 @@ def inst_unit_scaling(peak):
     """
 
     unit_table = [
-        (2 ** 0, 'i'),
-        (2 ** 10, 'ki'),
-        (2 ** 20, 'Mi'),
-        (2 ** 30, 'Gi'),
-        (2 ** 40, 'Ti'),
-        (2 ** 50, 'Pi'),
-        (2 ** 60, 'Ei')
+        (2 ** 0, "i"),
+        (2 ** 10, "ki"),
+        (2 ** 20, "Mi"),
+        (2 ** 30, "Gi"),
+        (2 ** 40, "Ti"),
+        (2 ** 50, "Pi"),
+        (2 ** 60, "Ei")
     ]
 
     for value, name in unit_table:
@@ -43,11 +43,11 @@ def time_unit_scaling(peak):
     """
 
     if peak // 1000 < 1:
-        return (1, 'milliseconds (ms)')
+        return (1, "milliseconds (ms)")
     elif 1 <= peak // 1000 < 60:
-        return (1000, 'seconds (s)')
+        return (1000, "seconds (s)")
     else:
-        return (60000, 'minutes (m)')
+        return (60000, "minutes (m)")
 
 
 def memory_unit_scaling(peak):
@@ -58,13 +58,13 @@ def memory_unit_scaling(peak):
     """
 
     unit_table = [
-        (2 ** 0, 'bytes (B)'),
-        (2 ** 10, 'kibibytes (KiB)'),
-        (2 ** 20, 'mebibytes (MiB)'),
-        (2 ** 30, 'gibibytes (GiB)'),
-        (2 ** 40, 'tebibytes (TiB)'),
-        (2 ** 50, 'pebibytes (PiB)'),
-        (2 ** 60, 'exbibytes (EiB)')
+        (2 ** 0, "bytes (B)"),
+        (2 ** 10, "kibibytes (KiB)"),
+        (2 ** 20, "mebibytes (MiB)"),
+        (2 ** 30, "gibibytes (GiB)"),
+        (2 ** 40, "tebibytes (TiB)"),
+        (2 ** 50, "pebibytes (PiB)"),
+        (2 ** 60, "exbibytes (EiB)")
     ]
 
     for value, name in unit_table:
@@ -89,16 +89,16 @@ def print_gnuplot_dtable(mdata):
     """
 
     print("# ms_processor.py - (C) Mathieu Turcotte, 2011")
-    print("# valgrind --tool=massif", mdata['desc'], mdata['cmd'])
-    print("# id", "time", "heap", "extra", "total", "stack", sep='\t')
-    for snapshot in mdata['snapshots']:
-        id = snapshot['id']
-        time = snapshot['time']
-        heap = snapshot['mem_heap']
-        extra = snapshot['mem_heap_extra']
+    print("# valgrind --tool=massif", mdata["desc"], mdata["cmd"])
+    print("# id", "time", "heap", "extra", "total", "stack", sep="\t")
+    for snapshot in mdata["snapshots"]:
+        id = snapshot["id"]
+        time = snapshot["time"]
+        heap = snapshot["mem_heap"]
+        extra = snapshot["mem_heap_extra"]
         total = heap + extra
-        stack = snapshot['mem_stack']
-        print('  ' + str(id), time, heap, extra, total, stack, sep='\t')
+        stack = snapshot["mem_stack"]
+        print("  " + str(id), time, heap, extra, total, stack, sep="\t")
 
 
 GNUPLOT_HEADER = """\
@@ -119,7 +119,7 @@ plot "-" using 1:2 title "Useful Heap",\\
 """
 
 
-def print_gnuplot_script(mdata, filename, format='png', xsize=1024, ysize=768):
+def print_gnuplot_script(mdata, filename, format="png", xsize=1024, ysize=768):
     """
     Print mdata as a gnuplot batch script which, when executed, will produce a
     plot of the massif.out data.
@@ -127,20 +127,20 @@ def print_gnuplot_script(mdata, filename, format='png', xsize=1024, ysize=768):
 
     # Retrieve the time peak and determine the y axis
     # scale and label.
-    peak_snapshot_id = mdata['peak_snapshot']
-    peak_snapshot = mdata['snapshots'][peak_snapshot_id]
-    memory_peak = peak_snapshot['mem_heap'] + peak_snapshot['mem_heap_extra']
+    peak_snapshot_id = mdata["peak_snapshot"]
+    peak_snapshot = mdata["snapshots"][peak_snapshot_id]
+    memory_peak = peak_snapshot["mem_heap"] + peak_snapshot["mem_heap_extra"]
     (yscale, ylabel) = memory_unit_scaling(memory_peak)
 
     # Retrieve the time peak and the time unit in order
     # to calculate the x axis scale and label.
-    time_peak = mdata['snapshots'][-1]['time']
-    time_unit = mdata['time_unit']
-    if time_unit == 'B':
+    time_peak = mdata["snapshots"][-1]["time"]
+    time_unit = mdata["time_unit"]
+    if time_unit == "B":
         (xscale, xlabel) = memory_unit_scaling(time_peak)
-    elif time_unit == 'ms':
+    elif time_unit == "ms":
         (xscale, xlabel) = time_unit_scaling(time_peak)
-    elif time_unit == 'i':
+    elif time_unit == "i":
         (xscale, xlabel) = inst_unit_scaling(time_peak)
     else:
         raise Exception("Can't handle time unit.")
@@ -150,8 +150,8 @@ def print_gnuplot_script(mdata, filename, format='png', xsize=1024, ysize=768):
         format=format,
         filename=filename,
         extension=format,
-        description=mdata['desc'],
-        command=mdata['cmd'],
+        description=mdata["desc"],
+        command=mdata["cmd"],
         xsize=xsize,
         ysize=ysize,
         xscale=xscale,
@@ -161,22 +161,22 @@ def print_gnuplot_script(mdata, filename, format='png', xsize=1024, ysize=768):
     ))
 
     # Output the useful heap data.
-    for snapshot in mdata['snapshots']:
-        print(snapshot['time'] / xscale,
-              snapshot['mem_heap'] / yscale, sep='\t')
+    for snapshot in mdata["snapshots"]:
+        print(snapshot["time"] / xscale,
+              snapshot["mem_heap"] / yscale, sep="\t")
     print("end")
 
     # Then, output the wasted heap data.
-    for snapshot in mdata['snapshots']:
-        print(snapshot['time'] / xscale,
-              snapshot['mem_heap_extra'] / yscale, sep='\t')
+    for snapshot in mdata["snapshots"]:
+        print(snapshot["time"] / xscale,
+              snapshot["mem_heap_extra"] / yscale, sep="\t")
     print("end")
 
     # Finally, output the total heap data.
-    for snapshot in mdata['snapshots']:
-        total = snapshot['mem_heap'] + snapshot['mem_heap_extra']
-        print(snapshot['time'] / xscale,
-              total / yscale, sep='\t')
+    for snapshot in mdata["snapshots"]:
+        total = snapshot["mem_heap"] + snapshot["mem_heap_extra"]
+        print(snapshot["time"] / xscale,
+              total / yscale, sep="\t")
     print("end")
 
 
@@ -188,46 +188,46 @@ def parse_args():
     argparser = optparse.OptionParser(description=description,
                                       usage=usage, version=version)
 
-    argparser.add_option('-o', '--output',
+    argparser.add_option("-o", "--output",
                          dest="output",
-                         default='table',
-                         choices=['json', 'gnuplot', 'table', 'graphviz'],
+                         default="table",
+                         choices=["json", "gnuplot", "table", "graphviz"],
                          metavar="F",
                          help="specify the output format: "
                               "json, gnuplot, graphviz or table")
 
     json_group = optparse.OptionGroup(argparser, "JSON Options")
-    json_group.add_option('-i', '--indent',
+    json_group.add_option("-i", "--indent",
                           action="store_true",
                           dest="indent",
                           help="indent the json output")
     argparser.add_option_group(json_group)
 
     graphviz_group = optparse.OptionGroup(argparser, "Graphviz Options")
-    graphviz_group.add_option('--snapshot',
-                              type='int',
+    graphviz_group.add_option("--snapshot",
+                              type="int",
                               dest="snapshot",
-                              metavar='ID',
+                              metavar="ID",
                               help="output Graphviz script for a given "
                                    "snapshot")
     argparser.add_option_group(graphviz_group)
 
     gnuplot_group = optparse.OptionGroup(argparser, "GNUPlot Options")
-    gnuplot_group.add_option('-f', '--format',
+    gnuplot_group.add_option("-f", "--format",
                              dest="format",
-                             default='png',
-                             choices=['png', 'gif', 'jpeg'],
+                             default="png",
+                             choices=["png", "gif", "jpeg"],
                              metavar="F",
                              help="specify the plot output format: "
                                   "png, jpeg or gif")
-    gnuplot_group.add_option('-x', '--xsize',
-                             type='int',
+    gnuplot_group.add_option("-x", "--xsize",
+                             type="int",
                              dest="xsize",
                              default=1024,
                              metavar="X",
                              help="plot horizontal size")
-    gnuplot_group.add_option('-y', '--ysize',
-                             type='int',
+    gnuplot_group.add_option("-y", "--ysize",
+                             type="int",
                              dest="ysize",
                              default=768,
                              metavar="Y",
@@ -254,20 +254,20 @@ def main():
         try:
             mdata = msparser.parse_file(path)
 
-            if options.output == 'json':
+            if options.output == "json":
                 print_as_json(mdata, options.indent)
-            elif options.output == 'gnuplot':
+            elif options.output == "gnuplot":
                 print_gnuplot_script(mdata, os.path.basename(path),
                                      options.format, options.xsize,
                                      options.ysize)
-            elif options.output == 'table':
+            elif options.output == "table":
                 print_gnuplot_dtable(mdata)
 
         except ParseError as perr:
             print(perr, file=sys.stderr)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:

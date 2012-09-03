@@ -83,13 +83,13 @@ def parse(fd):
     Parse an already opened massif output file.
     """
     mdata = {}
-    mdata['snapshots'] = []
-    mdata['detailed_snapshots_index'] = []
+    mdata["snapshots"] = []
+    mdata["detailed_snapshots_index"] = []
 
     # Parse header data.
-    mdata['desc'] = _get_next_field(fd, _FIELD_DESC_RE)
-    mdata['cmd'] = _get_next_field(fd, _FIELD_CMD_RE)
-    mdata['time_unit'] = _get_next_field(fd, _FIELD_TIME_UNIT_RE)
+    mdata["desc"] = _get_next_field(fd, _FIELD_DESC_RE)
+    mdata["cmd"] = _get_next_field(fd, _FIELD_CMD_RE)
+    mdata["time_unit"] = _get_next_field(fd, _FIELD_TIME_UNIT_RE)
 
     while _get_next_snapshot(fd, mdata):
         continue
@@ -123,7 +123,7 @@ def _get_next_line(fd, may_reach_eof=False):
         else:
             return None
     else:
-        return line.strip('\n')
+        return line.strip("\n")
 
 
 def _get_next_field(fd, field_regex, may_reach_eof=False):
@@ -139,14 +139,14 @@ def _get_next_field(fd, field_regex, may_reach_eof=False):
             line = _get_next_line(fd, may_reach_eof)
         else:
             match = _match_unconditional(field_regex, line)
-            return match.group('data')
+            return match.group("data")
 
     return None
 
 
 def _get_next_snapshot(fd, mdata):
     """
-    Parse another snapshot, appending it to the mdata['snapshots'] list. On
+    Parse another snapshot, appending it to the mdata["snapshots"] list. On
     EOF, False will be returned.
     """
     snapshot_id = _get_next_field(fd, _FIELD_SNAPSHOT_RE, may_reach_eof=True)
@@ -164,13 +164,13 @@ def _get_next_snapshot(fd, mdata):
     # Handle the heap_tree field.
     if heap_tree != "empty":
         if heap_tree == "peak":
-            mdata['peak_snapshot_index'] = snapshot_id
+            mdata["peak_snapshot_index"] = snapshot_id
         heap_tree = _parse_heap_tree(fd)
-        mdata['detailed_snapshots_index'].append(snapshot_id)
+        mdata["detailed_snapshots_index"].append(snapshot_id)
     else:
         heap_tree = None
 
-    mdata['snapshots'].append({
+    mdata["snapshots"].append({
         "id": snapshot_id,
         "time": time,
         "mem_heap": mem_heap,
@@ -194,9 +194,9 @@ def _parse_heap_tree(fd):
         children.append(_parse_heap_node(fd))
 
     root_node = {}
-    root_node['details'] = None
-    root_node['nbytes'] = int(match.group("num_bytes"))
-    root_node['children'] = children
+    root_node["details"] = None
+    root_node["nbytes"] = int(match.group("num_bytes"))
+    root_node["children"] = children
 
     return root_node
 
@@ -208,7 +208,7 @@ def _parse_heap_node(fd):
     line = _get_next_line(fd)
     entry_match = _match_unconditional(_HEAP_ENTRY_RE, line)
 
-    details = entry_match.group('details')
+    details = entry_match.group("details")
     if _HEAP_BELOW_THRESHOLD_RE.match(details):
         details = None
     else:
@@ -222,10 +222,10 @@ def _parse_heap_node(fd):
             linum = int(linum)
 
         details = {
-            'address': details_match.group('address'),
-            'function': details_match.group('function'),
-            'file': details_match.group('fname'),
-            'line': linum
+            "address": details_match.group("address"),
+            "function": details_match.group("function"),
+            "file": details_match.group("fname"),
+            "line": linum
         }
 
     children = []
@@ -233,12 +233,12 @@ def _parse_heap_node(fd):
         children.append(_parse_heap_node(fd))
 
     heap_node = {}
-    heap_node['nbytes'] = int(entry_match.group("num_bytes"))
-    heap_node['children'] = children
-    heap_node['details'] = details
+    heap_node["nbytes"] = int(entry_match.group("num_bytes"))
+    heap_node["children"] = children
+    heap_node["details"] = details
 
     return heap_node
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass
