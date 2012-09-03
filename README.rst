@@ -115,6 +115,15 @@ The output should looks like this::
       8     184     8000    64      8064    0
       9     184     9000    72      9072    0
 
+Tests
+-----
+
+To run msparser's test suite::
+
+    $ python msparser_test.py --verbose
+
+The current build status on travis: http://travis-ci.org/#!/MathieuTurcotte/msparser
+
 License
 -------
 
