@@ -124,26 +124,24 @@ def parse(content):
     return msparser.parse(fd)
 
 
-class MassifParserTest(TestCase):
+class MassifParserEmptySnaphostTest(TestCase):
+    def setUp(self):
+        self.data = parse(EMPTY_SNAPSHOTS)
+
     def test_parse_time_unit(self):
-        data = parse(EMPTY_SNAPSHOTS)
-        self.assertEqual(data["time_unit"], "ms")
+        self.assertEqual(self.data["time_unit"], "ms")
 
     def test_parse_cmd(self):
-        data = parse(EMPTY_SNAPSHOTS)
-        self.assertEqual(data["cmd"], "./a.out")
+        self.assertEqual(self.data["cmd"], "./a.out")
 
     def test_parse_desc(self):
-        data = parse(EMPTY_SNAPSHOTS)
-        self.assertEqual(data["desc"], "--time-unit=ms")
+        self.assertEqual(self.data["desc"], "--time-unit=ms")
 
     def test_parse_snaphosts(self):
-        data = parse(EMPTY_SNAPSHOTS)
-        self.assertEqual(len(data["snapshots"]), 3)
+        self.assertEqual(len(self.data["snapshots"]), 3)
 
     def test_parse_empty_snapshot(self):
-        data = parse(EMPTY_SNAPSHOTS)
-        snapshot = data["snapshots"][2]
+        snapshot = self.data["snapshots"][2]
         self.assertEqual(snapshot["id"], 2, "id")
         self.assertEqual(snapshot["time"], 184, "time")
         self.assertEqual(snapshot["mem_heap"], 2000, "mem_heap")
@@ -151,9 +149,13 @@ class MassifParserTest(TestCase):
         self.assertEqual(snapshot["mem_stack"], 0, "mem_stack")
         self.assertEqual(snapshot["heap_tree"], None, "heap_tree")
 
+
+class MassifParserDetailedSnaphostTest(TestCase):
+    def setUp(self):
+        self.data = parse(DETAILED_SNAPSHOTS)
+
     def test_parse_snapshot_heap_tree(self):
-        data = parse(DETAILED_SNAPSHOTS)
-        snapshot = data["snapshots"][1]
+        snapshot = self.data["snapshots"][1]
 
         # Check the heap tree's root.
         root = snapshot["heap_tree"]
@@ -173,8 +175,7 @@ class MassifParserTest(TestCase):
         })
 
     def test_find_peak_snapshot(self):
-        data = parse(DETAILED_SNAPSHOTS)
-        peak_snapshot_index = data["peak_snapshot_index"]
+        peak_snapshot_index = self.data["peak_snapshot_index"]
         self.assertEqual(peak_snapshot_index, 3)
 
 if __name__ == "__main__":
