@@ -8,10 +8,12 @@ python:
 
 install:
     - pip install pep8 --use-mirrors
+    - pip install coverage --use-mirrors
 
 script:
     - pep8 *.py --ignore E501
-    - python msparser_test.py --verbose
+    - coverage run --omit *test.py msparser_test.py --verbose
+    - coverage report -m
 
 notifications:
   email:
