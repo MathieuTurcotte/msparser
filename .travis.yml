@@ -7,9 +7,9 @@ python:
   - "3.2"
 
 install:
-    - pip install unittest2 --use-mirrors
     - pip install pep8 --use-mirrors
     - pip install coverage --use-mirrors
+    - "if [[ $TRAVIS_PYTHON_VERSION == *2.[56]* ]]; then pip install unittest2; fi"
 
 script:
     - pep8 *.py --ignore E501
