@@ -9,7 +9,7 @@ file format, i.e. data files produced the Valgrind heap profiler.
 from __future__ import with_statement  # Enable with statement in Python 2.5.
 import re
 
-__all__ = ["parse", "parse_file"]
+__all__ = ["parse", "parse_file", "ParseError"]
 
 # Precompiled regex used to parse comments.
 _COMMENT_RE = re.compile("\s*(#|$)")
@@ -63,6 +63,10 @@ _HEAP_DETAILS_RE = re.compile(r"""
 
 
 class ParseError(Exception):
+    """
+    Error raised when a parsing error is encountered.
+    """
+
     def __init__(self, value):
         self.value = value
 
@@ -238,7 +242,3 @@ def _parse_heap_node(fd):
     heap_node["details"] = details
 
     return heap_node
-
-
-if __name__ == "__main__":
-    pass

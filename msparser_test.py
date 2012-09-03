@@ -1,7 +1,14 @@
 # Copyright (c) 2011 Mathieu Turcotte
 # Licensed under the MIT license.
 
-from unittest import TestCase, main
+from __future__ import with_statement  # Enable with statement in Python 2.5.
+import sys
+
+# Use unittest2 on versions older than Python 2.7.
+if sys.version_info[0] < 3 and sys.version_info[1] < 7:
+    from unittest2 import TestCase, main
+else:
+    from unittest import TestCase, main
 
 import msparser
 
@@ -112,9 +119,9 @@ class MockFile():
 
     def readline(self):
         if len(self.lines) > self.index:
-            line = self.lines[self.index]
+            line = self.lines[self.index] + "\n"
             self.index += 1
-            return line + "\n"
+            return line
         else:
             return ""
 
@@ -177,6 +184,77 @@ class MassifParserDetailedSnaphostTest(TestCase):
     def test_find_peak_snapshot(self):
         peak_snapshot_index = self.data["peak_snapshot_index"]
         self.assertEqual(peak_snapshot_index, 3)
+
+
+class MassifParserErrorDetectionTest(TestCase):
+    def test_detect_partial_file(self):
+        with self.assertRaises(msparser.ParseError):
+            msparser.parse(MockFile("desc: --time-unit=ms\n"
+                                    "c broken  md: ./a.out\n"
+                                    "time_unit: ms\n"
+                                    "#-----------\n"
+                                    "snapshot=0\n"
+                                    "#-----------\n"
+                                    "time=0\n"
+                                    "mem_heap_B=0"))
+
+    def test_detect_broken_header(self):
+        with self.assertRaises(msparser.ParseError):
+            msparser.parse(MockFile("desc: --time-unit=ms\n"
+                                    "c broken  md: ./a.out\n"
+                                    "time_unit: ms\n"
+                                    "#-----------\n"
+                                    "snapshot=0\n"
+                                    "#-----------\n"
+                                    "time=0\n"
+                                    "mem_heap_B=0\n"
+                                    "mem_heap_extra_B=0\n"
+                                    "mem_stacks_B=0\n"
+                                    "heap_tree=empty\n"))
+
+    def test_detect_broken_snapshot(self):
+        with self.assertRaises(msparser.ParseError):
+            msparser.parse(MockFile("desc: --time-unit=ms\n"
+                                    "cmd: ./a.out\n"
+                                    "time_unit: ms\n"
+                                    "#-----------\n"
+                                    "snapshot=0\n"
+                                    "#-----------\n"
+                                    "time=0\n"
+                                    "mem_heap_B=0\n"
+                                    "mem_h e a p_extra_B=0\n"
+                                    "mem_stacks_B=0\n"
+                                    "heap_tree=empty\n"))
+
+    def test_detect_broken_heap_tree(self):
+        fd = MockFile("desc: --time-unit=ms\n"
+                      "cmd: ./a.out\n"
+                      "time_unit: ms\n"
+                      "#-----------\n"
+                      "snapshot=0\n"
+                      "#-----------\n"
+                      "time=0\n"
+                      "mem_heap_B=0\n"
+                      "mem_heap_extra_B=0\n"
+                      "mem_stacks_B=0\n"
+                      "heap_tree=peak\n"
+                      "n4: 32000 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.\n"
+                      " n1: 12000 0x8048404: h (prog.c:4)\n"
+                      "  n2: 12000 0x804841D: g (prog.c:9)\n"
+                      "   n1: 6000 0x8048436: f (prog.c:14)\n"
+                      "    n0: 6000 0x8048472: main (prog.c:24)\n"
+                      "   n0: 6000 0x8048477: main (prog.c:26)\n"
+                      " n0: 10000 0x8048457: main (prog.c:22)\n"
+                      " n2: 8000 0x8048418: g (prog.c:8)\n"
+                      "  n1: 4000 0x8048436: f (prog.c:14)\n"
+                      # "   n0: 4000 0x8048472: main (prog.c:24)\n"
+                      "  n0: 4000 0x8048477: main (prog.c:26)\n"
+                      " n1: 2000 0x8048431: f (prog.c:13)\n"
+                      "  n0: 2000 0x8048472: main (prog.c:24)\n")
+
+        with self.assertRaises(msparser.ParseError):
+            msparser.parse(fd)
+
 
 if __name__ == "__main__":
     main()
