@@ -32,12 +32,12 @@ _FIELD_HEAP_TREE_RE = re.compile("heap_tree=(?P<data>\w+)")
 #   - the number of bytes
 #   - and the details section.
 _HEAP_ENTRY_RE = re.compile("""
-        \s*n                    # skip zero or more spaces, then 'n'
-        (?P<num_children>\d+)   # match number of children, 1 or more digits
-        :\s                     # skip ':' and one space
-        (?P<num_bytes>\d+)      # match the number of bytes, 1 or more digits
-        \s                      # skip one space
-        (?P<details>.*)         # match the details
+    \s*n                    # skip zero or more spaces, then 'n'
+    (?P<num_children>\d+)   # match number of children, 1 or more digits
+    :\s                     # skip ':' and one space
+    (?P<num_bytes>\d+)      # match the number of bytes, 1 or more digits
+    \s                      # skip one space
+    (?P<details>.*)         # match the details
 """, re.VERBOSE)
 
 # Precompiled regex to check if the details section is below threshold.
@@ -50,15 +50,15 @@ _HEAP_BELOW_THRESHOLD_RE = re.compile(r"""in.*places?.*""")
 #   - the file name or binary path, i.e. file.cpp or usr/local/bin/foo.so,
 #   - and a line number if present.
 _HEAP_DETAILS_RE = re.compile(r"""
-        (?P<address>[a-fA-f0-9x]+)  # match the hexadecimal address
-        :\s                         # skip ': '
-        (?P<function>.+)            # match the function's name
-        \s\(
-        (?:in\s)?                   # skip 'in ' if present
-        (?P<fname>[^:]+)            # match the file name, non-greedy
-        :?                          # skip ':', if present
-        (?P<line>\d+)?              # match the line number, if present
-        \)
+    (?P<address>[a-fA-f0-9x]+)  # match the hexadecimal address
+    :\s                         # skip ': '
+    (?P<function>.+)            # match the function's name
+    \s\(
+    (?:in\s)?                   # skip 'in ' if present
+    (?P<fname>[^:]+)            # match the file name, non-greedy
+    :?                          # skip ':', if present
+    (?P<line>\d+)?              # match the line number, if present
+    \)
 """, re.VERBOSE)
 
 
@@ -66,7 +66,6 @@ class ParseError(Exception):
     """
     Error raised when a parsing error is encountered.
     """
-
     def __init__(self, value):
         self.value = value
 
@@ -107,7 +106,6 @@ def _match_unconditional(regex, string):
     is no match we raise a ParseError.
     """
     match = regex.match(string)
-    # If we have no match, it's an error.
     if match is None:
         raise ParseError("".join(["can't match '", string, "' against '",
                          regex.pattern, "'"]))
@@ -119,8 +117,8 @@ def _get_next_line(fd, may_reach_eof=False):
     Read another line from fd. If may_reach_eof is False, reaching EOF will
     be considered as an error.
     """
-    line = fd.readline()
-    # Readline return an empty string on EOF.
+    line = fd.readline()  # Returns an empty string on EOF.
+
     if len(line) == 0:
         if may_reach_eof is False:
             raise ParseError("unexpected EOF")
