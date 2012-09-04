@@ -190,13 +190,13 @@ class MassifParserErrorDetectionTest(TestCase):
     def test_detect_partial_file(self):
         with self.assertRaises(msparser.ParseError):
             msparser.parse(MockFile("desc: --time-unit=ms\n"
-                                    "c broken  md: ./a.out\n"
+                                    "cmd: ./a.out\n"
                                     "time_unit: ms\n"
                                     "#-----------\n"
                                     "snapshot=0\n"
                                     "#-----------\n"
                                     "time=0\n"
-                                    "mem_heap_B=0"))
+                                    "mem_heap_B=0"))  # Missing snapshot's fields.
 
     def test_detect_broken_header(self):
         with self.assertRaises(msparser.ParseError):
