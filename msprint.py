@@ -15,11 +15,10 @@ import traceback
 def inst_unit_scaling(peak):
     """
     Given the peak instruction value to plot, get a scaling factor which will
-    divide the data point and the resulting unit name. Those informations is
+    divide the data point and the resulting unit name. These information are
     used to scale the data and set the axis label in the print_gnuplot_script
     function.
     """
-
     unit_table = [
         (2 ** 0, "i"),
         (2 ** 10, "ki"),
@@ -38,10 +37,9 @@ def inst_unit_scaling(peak):
 def time_unit_scaling(peak):
     """
     Given the peak time value to plot, get a scaling factor which will divide
-    the data point and the resulting unit name. Those informations is used to
+    the data point and the resulting unit name. These information are used to
     scale the data and set the axis label in the print_gnuplot_script function.
     """
-
     if peak // 1000 < 1:
         return (1, "milliseconds (ms)")
     elif 1 <= peak // 1000 < 60:
@@ -53,10 +51,9 @@ def time_unit_scaling(peak):
 def memory_unit_scaling(peak):
     """
     Given the peak memory value to plot, get a scaling factor which will divide
-    the data point and the resulting unit name. Those informations is used to
+    the data point and the resulting unit name. These information are used to
     scale the data and set the axis label in the print_gnuplot_script function.
     """
-
     unit_table = [
         (2 ** 0, "bytes (B)"),
         (2 ** 10, "kibibytes (KiB)"),
@@ -76,7 +73,6 @@ def print_as_json(mdata, indent):
     """
     Print mdata as json. If indent is true, the outputed json is indented.
     """
-
     if indent:
         print(json.dumps(mdata, indent=1))
     else:
@@ -87,7 +83,6 @@ def print_gnuplot_dtable(mdata):
     """
     Print mdata as a data table ready for gnuplot consumption.
     """
-
     print("# ms_processor.py - (C) Mathieu Turcotte, 2011")
     print("# valgrind --tool=massif", mdata["desc"], mdata["cmd"])
     print("# id", "time", "heap", "extra", "total", "stack", sep="\t")
@@ -124,16 +119,14 @@ def print_gnuplot_script(mdata, filename, format="png", xsize=1024, ysize=768):
     Print mdata as a gnuplot batch script which, when executed, will produce a
     plot of the massif.out data.
     """
-
-    # Retrieve the time peak and determine the y axis
-    # scale and label.
+    # Retrieve the time peak and determine the y axis scale and label.
     peak_snapshot_id = mdata["peak_snapshot"]
     peak_snapshot = mdata["snapshots"][peak_snapshot_id]
     memory_peak = peak_snapshot["mem_heap"] + peak_snapshot["mem_heap_extra"]
     (yscale, ylabel) = memory_unit_scaling(memory_peak)
 
-    # Retrieve the time peak and the time unit in order
-    # to calculate the x axis scale and label.
+    # Retrieve the time peak and the time unit in order to compute the x
+    # axis scale and label.
     time_peak = mdata["snapshots"][-1]["time"]
     time_unit = mdata["time_unit"]
     if time_unit == "B":
@@ -250,10 +243,10 @@ def parse_args():
 
 def main():
     (options, args) = parse_args()
+
     for path in args[0:]:
         try:
             mdata = msparser.parse_file(path)
-
             if options.output == "json":
                 print_as_json(mdata, options.indent)
             elif options.output == "gnuplot":
@@ -262,7 +255,6 @@ def main():
                                      options.ysize)
             elif options.output == "table":
                 print_gnuplot_dtable(mdata)
-
         except ParseError as perr:
             print(perr, file=sys.stderr)
 
