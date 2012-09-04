@@ -201,7 +201,7 @@ class MassifParserErrorDetectionTest(TestCase):
     def test_detect_broken_header(self):
         with self.assertRaises(msparser.ParseError):
             msparser.parse(MockFile("desc: --time-unit=ms\n"
-                                    "c broken  md: ./a.out\n"
+                                    "c broken  md: ./a.out\n"  # Bad tag name.
                                     "time_unit: ms\n"
                                     "#-----------\n"
                                     "snapshot=0\n"
@@ -222,7 +222,7 @@ class MassifParserErrorDetectionTest(TestCase):
                                     "#-----------\n"
                                     "time=0\n"
                                     "mem_heap_B=0\n"
-                                    "mem_h e a p_extra_B=0\n"
+                                    "mem_h e a p_extra_B=0\n"  # Bad tag name.
                                     "mem_stacks_B=0\n"
                                     "heap_tree=empty\n"))
 
