@@ -50,7 +50,7 @@ _HEAP_BELOW_THRESHOLD_RE = re.compile(r"""in.*places?.*""")
 #   - the file name or binary path, i.e. file.cpp or usr/local/bin/foo.so,
 #   - and a line number if present.
 _HEAP_DETAILS_RE = re.compile(r"""
-    (?P<address>[a-fA-f0-9x]+)  # match the hexadecimal address
+    (?P<address>[a-fA-F0-9x]+)  # match the hexadecimal address
     :\s                         # skip ': '
     (?P<function>.+)            # match the function's name
     \s\(
