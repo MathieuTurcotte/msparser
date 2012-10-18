@@ -65,7 +65,10 @@ heap_tree=detailed
 n3: 56850 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
  n1: 50456 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:114)
   n2: 50456 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)
-   n0: 50456 0x8049C2C: main (memory.cpp:30)
+   n1: 50456 0x8049C2C: main (memory.cpp:30)
+    n1: 50456 0x804C: ??? (memory.cpp:125)
+     n1: 50456 0x804BE5C: (below main) (libc-start.c:226)
+      n0: 50456 0x2: ???
    n0: 0 in 1 place, below massif's threshold (01.00%)
  n1: 5628 0x804BE5C: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:42)
   n2: 5628 0x804C30F: DancingLinksSolver::solve(Sudoku&) (SudokuSolver.cpp:15)

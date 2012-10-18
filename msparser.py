@@ -49,16 +49,22 @@ _HEAP_BELOW_THRESHOLD_RE = re.compile(r"""in.*places?.*""")
 #   - the function name,
 #   - the file name or binary path, i.e. file.cpp or usr/local/bin/foo.so,
 #   - and a line number if present.
+# Last two parts are optional to handle entries without a file name or binary
+# path.
 _HEAP_DETAILS_RE = re.compile(r"""
     (?P<address>[a-fA-F0-9x]+)  # match the hexadecimal address
     :\s                         # skip ': '
-    (?P<function>.+)            # match the function's name
-    \s\(
-    (?:in\s)?                   # skip 'in ' if present
-    (?P<fname>[^:]+)            # match the file name, non-greedy
-    :?                          # skip ':', if present
-    (?P<line>\d+)?              # match the line number, if present
-    \)
+    (?P<function>.+?)           # match the function's name, non-greedy
+    (?:                         # don't capture fname/line group
+        \s
+        \(
+        (?:in\s)?               # skip 'in ' if present
+        (?P<fname>[^:]+)        # match the file name
+        :?                      # skip ':', if present
+        (?P<line>\d+)?          # match the line number, if present
+        \)
+    )?                          # fname/line group is optional
+    $                           # should have reached the EOL
 """, re.VERBOSE)
 
 
