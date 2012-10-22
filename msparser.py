@@ -99,7 +99,7 @@ class ParseError(Exception):
 
     def __str__(self):
         return " ".join([str(self.msg), 'at line', str(self.line), 'in',
-            str(self.filename)])
+                        str(self.filename)])
 
 
 def parse_file(filepath):
