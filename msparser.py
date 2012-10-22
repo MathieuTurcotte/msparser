@@ -7,6 +7,7 @@ file format, i.e. data files produced the Valgrind heap profiler.
 """
 
 from __future__ import with_statement  # Enable with statement in Python 2.5.
+import os.path
 import re
 
 __all__ = ["parse", "parse_file", "ParseError"]
@@ -29,7 +30,7 @@ _FIELD_HEAP_TREE_RE = re.compile("heap_tree=(?P<data>\w+)")
 
 # Precompiled regex to parse heap entries. Matches three things:
 #   - the number of children,
-#   - the number of bytes
+#   - the number of bytes,
 #   - and the details section.
 _HEAP_ENTRY_RE = re.compile("""
     \s*n                    # skip zero or more spaces, then 'n'
@@ -68,15 +69,37 @@ _HEAP_DETAILS_RE = re.compile(r"""
 """, re.VERBOSE)
 
 
+class ParseContext:
+    """
+    A simple context for parsing. Dumbed down version of fileinput.
+    """
+    def __init__(self, fd):
+        self._fd = fd
+        self._line = 0
+
+    def line(self):
+        return self._line
+
+    def readline(self):
+        self._line += 1
+        return self._fd.readline()
+
+    def filename(self):
+        return os.path.abspath(self._fd.name)
+
+
 class ParseError(Exception):
     """
     Error raised when a parsing error is encountered.
     """
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, msg, ctx):
+        self.msg = msg
+        self.line = ctx.line()
+        self.filename = ctx.filename()
 
     def __str__(self):
-        return str(self.value)
+        return " ".join([str(self.msg), 'at line', str(self.line), 'in',
+            str(self.filename)])
 
 
 def parse_file(filepath):
@@ -91,22 +114,24 @@ def parse(fd):
     """
     Parse an already opened massif output file.
     """
+    ctx = ParseContext(fd)
+
     mdata = {}
     mdata["snapshots"] = []
     mdata["detailed_snapshots_index"] = []
 
     # Parse header data.
-    mdata["desc"] = _get_next_field(fd, _FIELD_DESC_RE)
-    mdata["cmd"] = _get_next_field(fd, _FIELD_CMD_RE)
-    mdata["time_unit"] = _get_next_field(fd, _FIELD_TIME_UNIT_RE)
+    mdata["desc"] = _get_next_field(ctx, _FIELD_DESC_RE)
+    mdata["cmd"] = _get_next_field(ctx, _FIELD_CMD_RE)
+    mdata["time_unit"] = _get_next_field(ctx, _FIELD_TIME_UNIT_RE)
 
-    while _get_next_snapshot(fd, mdata):
+    while _get_next_snapshot(ctx, mdata):
         continue
 
     return mdata
 
 
-def _match_unconditional(regex, string):
+def _match_unconditional(ctx, regex, string):
     """
     Unconditionaly match a regular expression against a string, i.e. if there
     is no match we raise a ParseError.
@@ -114,66 +139,66 @@ def _match_unconditional(regex, string):
     match = regex.match(string)
     if match is None:
         raise ParseError("".join(["can't match '", string, "' against '",
-                         regex.pattern, "'"]))
+                         regex.pattern, "'"]), ctx)
     return match
 
 
-def _get_next_line(fd, may_reach_eof=False):
+def _get_next_line(ctx, may_reach_eof=False):
     """
-    Read another line from fd. If may_reach_eof is False, reaching EOF will
+    Read another line from ctx. If may_reach_eof is False, reaching EOF will
     be considered as an error.
     """
-    line = fd.readline()  # Returns an empty string on EOF.
+    line = ctx.readline()  # Returns an empty string on EOF.
 
     if len(line) == 0:
         if may_reach_eof is False:
-            raise ParseError("unexpected EOF")
+            raise ParseError("unexpected EOF", ctx)
         else:
             return None
     else:
         return line.strip("\n")
 
 
-def _get_next_field(fd, field_regex, may_reach_eof=False):
+def _get_next_field(ctx, field_regex, may_reach_eof=False):
     """
     Read the next data field. The field_regex arg is a regular expression that
     will be used to match the field. Data will be extracted from the match
     object by calling m.group('data'). If may_reach_eof is False, reaching EOF
     will be considered as an error.
     """
-    line = _get_next_line(fd, may_reach_eof)
+    line = _get_next_line(ctx, may_reach_eof)
     while line is not None:
         if _COMMENT_RE.match(line):
-            line = _get_next_line(fd, may_reach_eof)
+            line = _get_next_line(ctx, may_reach_eof)
         else:
-            match = _match_unconditional(field_regex, line)
+            match = _match_unconditional(ctx, field_regex, line)
             return match.group("data")
 
     return None
 
 
-def _get_next_snapshot(fd, mdata):
+def _get_next_snapshot(ctx, mdata):
     """
     Parse another snapshot, appending it to the mdata["snapshots"] list. On
     EOF, False will be returned.
     """
-    snapshot_id = _get_next_field(fd, _FIELD_SNAPSHOT_RE, may_reach_eof=True)
+    snapshot_id = _get_next_field(ctx, _FIELD_SNAPSHOT_RE, may_reach_eof=True)
 
     if snapshot_id is None:
         return False
 
     snapshot_id = int(snapshot_id)
-    time = int(_get_next_field(fd, _FIELD_TIME_RE))
-    mem_heap = int(_get_next_field(fd, _FIELD_MEM_HEAP_RE))
-    mem_heap_extra = int(_get_next_field(fd, _FIELD_MEM_EXTRA_RE))
-    mem_stacks = int(_get_next_field(fd, _FIELD_MEM_STACK_RE))
-    heap_tree = _get_next_field(fd, _FIELD_HEAP_TREE_RE)
+    time = int(_get_next_field(ctx, _FIELD_TIME_RE))
+    mem_heap = int(_get_next_field(ctx, _FIELD_MEM_HEAP_RE))
+    mem_heap_extra = int(_get_next_field(ctx, _FIELD_MEM_EXTRA_RE))
+    mem_stacks = int(_get_next_field(ctx, _FIELD_MEM_STACK_RE))
+    heap_tree = _get_next_field(ctx, _FIELD_HEAP_TREE_RE)
 
     # Handle the heap_tree field.
     if heap_tree != "empty":
         if heap_tree == "peak":
             mdata["peak_snapshot_index"] = snapshot_id
-        heap_tree = _parse_heap_tree(fd)
+        heap_tree = _parse_heap_tree(ctx)
         mdata["detailed_snapshots_index"].append(snapshot_id)
     else:
         heap_tree = None
@@ -190,16 +215,16 @@ def _get_next_snapshot(fd, mdata):
     return True
 
 
-def _parse_heap_tree(fd):
+def _parse_heap_tree(ctx):
     """
     Parse a snapshot heap tree.
     """
-    line = _get_next_line(fd)
-    match = _match_unconditional(_HEAP_ENTRY_RE, line)
+    line = _get_next_line(ctx)
+    match = _match_unconditional(ctx, _HEAP_ENTRY_RE, line)
 
     children = []
     for i in range(0, int(match.group("num_children"))):
-        children.append(_parse_heap_node(fd))
+        children.append(_parse_heap_node(ctx))
 
     root_node = {}
     root_node["details"] = None
@@ -209,18 +234,18 @@ def _parse_heap_tree(fd):
     return root_node
 
 
-def _parse_heap_node(fd):
+def _parse_heap_node(ctx):
     """
     Parse a normal heap tree node.
     """
-    line = _get_next_line(fd)
-    entry_match = _match_unconditional(_HEAP_ENTRY_RE, line)
+    line = _get_next_line(ctx)
+    entry_match = _match_unconditional(ctx, _HEAP_ENTRY_RE, line)
 
     details = entry_match.group("details")
     if _HEAP_BELOW_THRESHOLD_RE.match(details):
         details = None
     else:
-        details_match = _match_unconditional(_HEAP_DETAILS_RE, details)
+        details_match = _match_unconditional(ctx, _HEAP_DETAILS_RE, details)
         # The 'line' field could be None if the binary/library wasn't compiled
         # with debug info. To avoid errors on this condition, we need to make
         # sure that the 'line' field is not None before trying to convert it to
@@ -238,7 +263,7 @@ def _parse_heap_node(fd):
 
     children = []
     for i in range(0, int(entry_match.group("num_children"))):
-        children.append(_parse_heap_node(fd))
+        children.append(_parse_heap_node(ctx))
 
     heap_node = {}
     heap_node["nbytes"] = int(entry_match.group("num_bytes"))

@@ -119,6 +119,7 @@ class MockFile():
     def __init__(self, content):
         self.lines = content.split("\n")
         self.index = 0
+        self.name = __file__
 
     def readline(self):
         if len(self.lines) > self.index:
