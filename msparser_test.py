@@ -75,7 +75,7 @@ class ParseHeaderTest(TestCase):
         try:
             self.parse_header(lines, 0)
             self.fail("ParseError should have been thrown.")
-        except msparser.ParseError as err:
+        except msparser.ParseError, err:
             self.assertEqual(err.line, 3)
             self.assertEqual(err.filename, self.ctx.filename())
 
@@ -245,7 +245,7 @@ class ParseSnapshotTest(TestCase):
         try:
             self.parse_snapshot(lines, 345)
             self.fail("ParseError should have been thrown.")
-        except msparser.ParseError as err:
+        except msparser.ParseError, err:
             self.assertEqual(err.line, 350)
             self.assertEqual(err.filename, self.ctx.filename())
 
