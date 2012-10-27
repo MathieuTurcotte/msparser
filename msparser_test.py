@@ -66,7 +66,8 @@ class ParseHeapTreeTest(TestCase):
 
     def test_parse_one_level_simple(self):
         tree = self.parse_heap_tree([
-            "n0: 50456 0x804BFC0: DancingLinksSolver::build_cover_matrix(Sudoku&) (SudokuSolver.cpp:30)"
+            "n0: 50456 0x804BFC0: DancingLinksSolver::build_cover_matrix("
+            "Sudoku&) (SudokuSolver.cpp:30)"
         ])
         self.assertEqual(tree["nbytes"], 50456)
         self.assertEqual(len(tree["children"]), 0)
@@ -90,7 +91,8 @@ class ParseHeapTreeTest(TestCase):
 
     def test_parse_one_level_page_allocation(self):
         tree = self.parse_heap_tree([
-            "n0: 165990400 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc."
+            "n0: 165990400 (page allocation syscalls) mmap/mremap/brk, "
+            "--alloc-fns, etc."
         ])
         self.assertEqual(tree["nbytes"], 165990400)
         self.assertEqual(len(tree["children"]), 0)
@@ -106,7 +108,8 @@ class ParseHeapTreeTest(TestCase):
 
     def test_parse_multi_levels(self):
         tree = self.parse_heap_tree([
-            "n2: 165990400 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.",
+            "n2: 165990400 (page allocation syscalls) mmap/mremap/brk, "
+            "--alloc-fns, etc.",
             " n2: 111468544 0x5E70169: mmap (syscall-template.S:82)",
             "  n0: 83079168 0x5E031E7: malloc (arena.c:824)",
             "  n0: 8192 in 1 place, below massif's threshold (01.00%)",
@@ -216,7 +219,7 @@ def make_parse_test(path_to_actual, path_to_expected):
     def test_parse(self):
         actual = msparser.parse_file(path_to_actual)
         expected = json.load(open(path_to_expected))
-        self.assertEqual(expected, actual);
+        self.assertEqual(expected, actual)
     return test_parse
 
 
