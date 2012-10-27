@@ -1,0 +1,294 @@
+{
+ "desc": "--time-unit=ms", 
+ "cmd": "./a.out", 
+ "snapshots": [
+  {
+   "mem_stack": 0, 
+   "time": 0, 
+   "mem_heap_extra": 0, 
+   "mem_heap": 0, 
+   "heap_tree": null, 
+   "id": 0
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 183, 
+   "mem_heap_extra": 8, 
+   "mem_heap": 1000, 
+   "heap_tree": null, 
+   "id": 1
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 16, 
+   "mem_heap": 2000, 
+   "heap_tree": null, 
+   "id": 2
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 24, 
+   "mem_heap": 3000, 
+   "heap_tree": null, 
+   "id": 3
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 32, 
+   "mem_heap": 4000, 
+   "heap_tree": null, 
+   "id": 4
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 40, 
+   "mem_heap": 5000, 
+   "heap_tree": null, 
+   "id": 5
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 48, 
+   "mem_heap": 6000, 
+   "heap_tree": null, 
+   "id": 6
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 56, 
+   "mem_heap": 7000, 
+   "heap_tree": null, 
+   "id": 7
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 64, 
+   "mem_heap": 8000, 
+   "heap_tree": null, 
+   "id": 8
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 72, 
+   "mem_heap": 9000, 
+   "heap_tree": {
+    "children": [
+     {
+      "children": [], 
+      "details": {
+       "address": "0x8048457", 
+       "line": 22, 
+       "function": "main", 
+       "file": "prog.c"
+      }, 
+      "nbytes": 9000
+     }
+    ], 
+    "details": null, 
+    "nbytes": 9000
+   }, 
+   "id": 9
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 80, 
+   "mem_heap": 10000, 
+   "heap_tree": null, 
+   "id": 10
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 88, 
+   "mem_heap": 12000, 
+   "heap_tree": null, 
+   "id": 11
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 96, 
+   "mem_heap": 16000, 
+   "heap_tree": null, 
+   "id": 12
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 104, 
+   "mem_heap": 22000, 
+   "heap_tree": null, 
+   "id": 13
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 112, 
+   "mem_heap": 26000, 
+   "heap_tree": null, 
+   "id": 14
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 184, 
+   "mem_heap_extra": 120, 
+   "mem_heap": 32000, 
+   "heap_tree": null, 
+   "id": 15
+  }, 
+  {
+   "mem_stack": 0, 
+   "time": 185, 
+   "mem_heap_extra": 120, 
+   "mem_heap": 32000, 
+   "heap_tree": {
+    "children": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [], 
+            "details": {
+             "address": "0x8048472", 
+             "line": 24, 
+             "function": "main", 
+             "file": "prog.c"
+            }, 
+            "nbytes": 6000
+           }
+          ], 
+          "details": {
+           "address": "0x8048436", 
+           "line": 14, 
+           "function": "f", 
+           "file": "prog.c"
+          }, 
+          "nbytes": 6000
+         }, 
+         {
+          "children": [], 
+          "details": {
+           "address": "0x8048477", 
+           "line": 26, 
+           "function": "main", 
+           "file": "prog.c"
+          }, 
+          "nbytes": 6000
+         }
+        ], 
+        "details": {
+         "address": "0x804841D", 
+         "line": 9, 
+         "function": "g", 
+         "file": "prog.c"
+        }, 
+        "nbytes": 12000
+       }
+      ], 
+      "details": {
+       "address": "0x8048404", 
+       "line": 4, 
+       "function": "h", 
+       "file": "prog.c"
+      }, 
+      "nbytes": 12000
+     }, 
+     {
+      "children": [], 
+      "details": {
+       "address": "0x8048457", 
+       "line": 22, 
+       "function": "main", 
+       "file": "prog.c"
+      }, 
+      "nbytes": 10000
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [], 
+          "details": {
+           "address": "0x8048472", 
+           "line": 24, 
+           "function": "main", 
+           "file": "prog.c"
+          }, 
+          "nbytes": 4000
+         }
+        ], 
+        "details": {
+         "address": "0x8048436", 
+         "line": 14, 
+         "function": "f", 
+         "file": "prog.c"
+        }, 
+        "nbytes": 4000
+       }, 
+       {
+        "children": [], 
+        "details": {
+         "address": "0x8048477", 
+         "line": 26, 
+         "function": "main", 
+         "file": "prog.c"
+        }, 
+        "nbytes": 4000
+       }
+      ], 
+      "details": {
+       "address": "0x8048418", 
+       "line": 8, 
+       "function": "g", 
+       "file": "prog.c"
+      }, 
+      "nbytes": 8000
+     }, 
+     {
+      "children": [
+       {
+        "children": [], 
+        "details": {
+         "address": "0x8048472", 
+         "line": 24, 
+         "function": "main", 
+         "file": "prog.c"
+        }, 
+        "nbytes": 2000
+       }
+      ], 
+      "details": {
+       "address": "0x8048431", 
+       "line": 13, 
+       "function": "f", 
+       "file": "prog.c"
+      }, 
+      "nbytes": 2000
+     }
+    ], 
+    "details": null, 
+    "nbytes": 32000
+   }, 
+   "id": 16
+  }
+ ], 
+ "detailed_snapshots_index": [
+  9, 
+  16
+ ], 
+ "time_unit": "ms", 
+ "peak_snapshot_index": 16
+}

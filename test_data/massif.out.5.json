@@ -1,0 +1,1934 @@
+{
+ "time_unit": "ms", 
+ "snapshots": [
+  {
+   "mem_heap_extra": 0, 
+   "heap_tree": null, 
+   "time": 0, 
+   "mem_heap": 0, 
+   "mem_stack": 0, 
+   "id": 0
+  }, 
+  {
+   "mem_heap_extra": 11, 
+   "heap_tree": null, 
+   "time": 355, 
+   "mem_heap": 29, 
+   "mem_stack": 0, 
+   "id": 1
+  }, 
+  {
+   "mem_heap_extra": 1020, 
+   "heap_tree": null, 
+   "time": 368, 
+   "mem_heap": 2668, 
+   "mem_stack": 0, 
+   "id": 2
+  }, 
+  {
+   "mem_heap_extra": 522, 
+   "heap_tree": null, 
+   "time": 383, 
+   "mem_heap": 2902, 
+   "mem_stack": 0, 
+   "id": 3
+  }, 
+  {
+   "mem_heap_extra": 7062, 
+   "heap_tree": null, 
+   "time": 393, 
+   "mem_heap": 18162, 
+   "mem_stack": 0, 
+   "id": 4
+  }, 
+  {
+   "mem_heap_extra": 7074, 
+   "heap_tree": null, 
+   "time": 400, 
+   "mem_heap": 18190, 
+   "mem_stack": 0, 
+   "id": 5
+  }, 
+  {
+   "mem_heap_extra": 10410, 
+   "heap_tree": {
+    "nbytes": 25974, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 11116, 
+      "children": [
+       {
+        "nbytes": 11116, 
+        "children": [
+         {
+          "nbytes": 11116, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 9072, 
+      "children": [
+       {
+        "nbytes": 9072, 
+        "children": [
+         {
+          "nbytes": 9072, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 3724, 
+      "children": [
+       {
+        "nbytes": 3724, 
+        "children": [
+         {
+          "nbytes": 3724, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 1296, 
+      "children": [
+       {
+        "nbytes": 1296, 
+        "children": [
+         {
+          "nbytes": 1296, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804BE0A", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 582, 
+      "children": [
+       {
+        "nbytes": 582, 
+        "children": [
+         {
+          "nbytes": 486, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C0C", 
+           "line": 28
+          }
+         }, 
+         {
+          "nbytes": 96, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "Sudoku::Sudoku(std::string, unsigned short, unsigned short)", 
+         "file": "stl_vector.h", 
+         "address": "0x804AA3D", 
+         "line": 859
+        }
+       }
+      ], 
+      "details": {
+       "function": "std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804B120", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 184, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 411, 
+   "mem_heap": 25974, 
+   "mem_stack": 0, 
+   "id": 6
+  }, 
+  {
+   "mem_heap_extra": 19650, 
+   "heap_tree": {
+    "nbytes": 47534, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 27300, 
+      "children": [
+       {
+        "nbytes": 27300, 
+        "children": [
+         {
+          "nbytes": 27300, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 9100, 
+      "children": [
+       {
+        "nbytes": 9100, 
+        "children": [
+         {
+          "nbytes": 9100, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 9072, 
+      "children": [
+       {
+        "nbytes": 9072, 
+        "children": [
+         {
+          "nbytes": 9072, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 1296, 
+      "children": [
+       {
+        "nbytes": 1296, 
+        "children": [
+         {
+          "nbytes": 1296, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804BE0A", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 766, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 426, 
+   "mem_heap": 47534, 
+   "mem_stack": 0, 
+   "id": 7
+  }, 
+  {
+   "mem_heap_extra": 25434, 
+   "heap_tree": null, 
+   "time": 434, 
+   "mem_heap": 61030, 
+   "mem_stack": 0, 
+   "id": 8
+  }, 
+  {
+   "mem_heap_extra": 32010, 
+   "heap_tree": {
+    "nbytes": 76374, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 48916, 
+      "children": [
+       {
+        "nbytes": 48916, 
+        "children": [
+         {
+          "nbytes": 48916, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 16324, 
+      "children": [
+       {
+        "nbytes": 16324, 
+        "children": [
+         {
+          "nbytes": 16324, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 9072, 
+      "children": [
+       {
+        "nbytes": 9072, 
+        "children": [
+         {
+          "nbytes": 9072, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 1296, 
+      "children": [
+       {
+        "nbytes": 1296, 
+        "children": [
+         {
+          "nbytes": 1296, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804BE0A", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 766, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 442, 
+   "mem_heap": 76374, 
+   "mem_stack": 0, 
+   "id": 9
+  }, 
+  {
+   "mem_heap_extra": 39042, 
+   "heap_tree": {
+    "nbytes": 92782, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 61236, 
+      "children": [
+       {
+        "nbytes": 61236, 
+        "children": [
+         {
+          "nbytes": 61236, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 20412, 
+      "children": [
+       {
+        "nbytes": 20412, 
+        "children": [
+         {
+          "nbytes": 20412, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 9072, 
+      "children": [
+       {
+        "nbytes": 9072, 
+        "children": [
+         {
+          "nbytes": 9072, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C2C", 
+           "line": 30
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 2062, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 451, 
+   "mem_heap": 92782, 
+   "mem_stack": 0, 
+   "id": 10
+  }, 
+  {
+   "mem_heap_extra": 20998, 
+   "heap_tree": null, 
+   "time": 466, 
+   "mem_heap": 49402, 
+   "mem_stack": 0, 
+   "id": 11
+  }, 
+  {
+   "mem_heap_extra": 12094, 
+   "heap_tree": null, 
+   "time": 474, 
+   "mem_heap": 28626, 
+   "mem_stack": 0, 
+   "id": 12
+  }, 
+  {
+   "mem_heap_extra": 2974, 
+   "heap_tree": null, 
+   "time": 484, 
+   "mem_heap": 7346, 
+   "mem_stack": 0, 
+   "id": 13
+  }, 
+  {
+   "mem_heap_extra": 11386, 
+   "heap_tree": null, 
+   "time": 497, 
+   "mem_heap": 32462, 
+   "mem_stack": 0, 
+   "id": 14
+  }, 
+  {
+   "mem_heap_extra": 12526, 
+   "heap_tree": {
+    "nbytes": 35122, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 28532, 
+      "children": [
+       {
+        "nbytes": 28532, 
+        "children": [
+         {
+          "nbytes": 28532, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 4096, 
+      "children": [
+       {
+        "nbytes": 4096, 
+        "children": [
+         {
+          "nbytes": 4096, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804BE0A", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 2118, 
+      "children": [
+       {
+        "nbytes": 2118, 
+        "children": [
+         {
+          "nbytes": 1536, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C68", 
+           "line": 47
+          }
+         }, 
+         {
+          "nbytes": 486, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C0C", 
+           "line": 28
+          }
+         }, 
+         {
+          "nbytes": 96, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "Sudoku::Sudoku(std::string, unsigned short, unsigned short)", 
+         "file": "stl_vector.h", 
+         "address": "0x804AA3D", 
+         "line": 859
+        }
+       }
+      ], 
+      "details": {
+       "function": "std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804B120", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 376, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 508, 
+   "mem_heap": 35122, 
+   "mem_stack": 0, 
+   "id": 15
+  }, 
+  {
+   "mem_heap_extra": 21886, 
+   "heap_tree": null, 
+   "time": 516, 
+   "mem_heap": 56962, 
+   "mem_stack": 0, 
+   "id": 16
+  }, 
+  {
+   "mem_heap_extra": 33262, 
+   "heap_tree": null, 
+   "time": 525, 
+   "mem_heap": 83506, 
+   "mem_stack": 0, 
+   "id": 17
+  }, 
+  {
+   "mem_heap_extra": 33838, 
+   "heap_tree": null, 
+   "time": 534, 
+   "mem_heap": 84850, 
+   "mem_stack": 0, 
+   "id": 18
+  }, 
+  {
+   "mem_heap_extra": 45250, 
+   "heap_tree": null, 
+   "time": 547, 
+   "mem_heap": 111478, 
+   "mem_stack": 0, 
+   "id": 19
+  }, 
+  {
+   "mem_heap_extra": 55678, 
+   "heap_tree": null, 
+   "time": 555, 
+   "mem_heap": 135810, 
+   "mem_stack": 0, 
+   "id": 20
+  }, 
+  {
+   "mem_heap_extra": 64822, 
+   "heap_tree": null, 
+   "time": 563, 
+   "mem_heap": 157146, 
+   "mem_stack": 0, 
+   "id": 21
+  }, 
+  {
+   "mem_heap_extra": 74926, 
+   "heap_tree": null, 
+   "time": 571, 
+   "mem_heap": 180722, 
+   "mem_stack": 0, 
+   "id": 22
+  }, 
+  {
+   "mem_heap_extra": 87514, 
+   "heap_tree": null, 
+   "time": 582, 
+   "mem_heap": 210094, 
+   "mem_stack": 0, 
+   "id": 23
+  }, 
+  {
+   "mem_heap_extra": 97510, 
+   "heap_tree": null, 
+   "time": 590, 
+   "mem_heap": 233418, 
+   "mem_stack": 0, 
+   "id": 24
+  }, 
+  {
+   "mem_heap_extra": 108070, 
+   "heap_tree": {
+    "nbytes": 258058, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 167076, 
+      "children": [
+       {
+        "nbytes": 167076, 
+        "children": [
+         {
+          "nbytes": 167076, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 55720, 
+      "children": [
+       {
+        "nbytes": 55720, 
+        "children": [
+         {
+          "nbytes": 55720, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 28672, 
+      "children": [
+       {
+        "nbytes": 28672, 
+        "children": [
+         {
+          "nbytes": 28672, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 4096, 
+      "children": [
+       {
+        "nbytes": 4096, 
+        "children": [
+         {
+          "nbytes": 4096, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804BE0A", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 2494, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 598, 
+   "mem_heap": 258058, 
+   "mem_stack": 0, 
+   "id": 25
+  }, 
+  {
+   "mem_heap_extra": 109258, 
+   "heap_tree": null, 
+   "time": 606, 
+   "mem_heap": 260830, 
+   "mem_stack": 0, 
+   "id": 26
+  }, 
+  {
+   "mem_heap_extra": 118390, 
+   "heap_tree": null, 
+   "time": 619, 
+   "mem_heap": 282138, 
+   "mem_stack": 0, 
+   "id": 27
+  }, 
+  {
+   "mem_heap_extra": 127894, 
+   "heap_tree": {
+    "nbytes": 304314, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 201768, 
+      "children": [
+       {
+        "nbytes": 201768, 
+        "children": [
+         {
+          "nbytes": 201768, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 67284, 
+      "children": [
+       {
+        "nbytes": 67284, 
+        "children": [
+         {
+          "nbytes": 67284, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 28672, 
+      "children": [
+       {
+        "nbytes": 28672, 
+        "children": [
+         {
+          "nbytes": 28672, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 6590, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 632, 
+   "mem_heap": 304314, 
+   "mem_stack": 0, 
+   "id": 28
+  }, 
+  {
+   "mem_heap_extra": 134002, 
+   "heap_tree": null, 
+   "time": 645, 
+   "mem_heap": 318566, 
+   "mem_stack": 0, 
+   "id": 29
+  }, 
+  {
+   "mem_heap_extra": 136630, 
+   "heap_tree": null, 
+   "time": 656, 
+   "mem_heap": 324698, 
+   "mem_stack": 0, 
+   "id": 30
+  }, 
+  {
+   "mem_heap_extra": 146182, 
+   "heap_tree": null, 
+   "time": 670, 
+   "mem_heap": 346986, 
+   "mem_stack": 0, 
+   "id": 31
+  }, 
+  {
+   "mem_heap_extra": 151126, 
+   "heap_tree": null, 
+   "time": 681, 
+   "mem_heap": 358522, 
+   "mem_stack": 0, 
+   "id": 32
+  }, 
+  {
+   "mem_heap_extra": 168598, 
+   "heap_tree": null, 
+   "time": 696, 
+   "mem_heap": 399290, 
+   "mem_stack": 0, 
+   "id": 33
+  }, 
+  {
+   "mem_heap_extra": 172978, 
+   "heap_tree": null, 
+   "time": 705, 
+   "mem_heap": 409510, 
+   "mem_stack": 0, 
+   "id": 34
+  }, 
+  {
+   "mem_heap_extra": 174250, 
+   "heap_tree": {
+    "nbytes": 412478, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 282912, 
+      "children": [
+       {
+        "nbytes": 282912, 
+        "children": [
+         {
+          "nbytes": 282912, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 94304, 
+      "children": [
+       {
+        "nbytes": 94304, 
+        "children": [
+         {
+          "nbytes": 94304, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 28672, 
+      "children": [
+       {
+        "nbytes": 28672, 
+        "children": [
+         {
+          "nbytes": 28672, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 6590, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 713, 
+   "mem_heap": 412478, 
+   "mem_stack": 0, 
+   "id": 35
+  }, 
+  {
+   "mem_heap_extra": 187678, 
+   "heap_tree": null, 
+   "time": 725, 
+   "mem_heap": 443810, 
+   "mem_stack": 0, 
+   "id": 36
+  }, 
+  {
+   "mem_heap_extra": 188974, 
+   "heap_tree": null, 
+   "time": 736, 
+   "mem_heap": 446834, 
+   "mem_stack": 0, 
+   "id": 37
+  }, 
+  {
+   "mem_heap_extra": 194086, 
+   "heap_tree": null, 
+   "time": 744, 
+   "mem_heap": 458762, 
+   "mem_stack": 0, 
+   "id": 38
+  }, 
+  {
+   "mem_heap_extra": 209194, 
+   "heap_tree": {
+    "nbytes": 494014, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 344064, 
+      "children": [
+       {
+        "nbytes": 344064, 
+        "children": [
+         {
+          "nbytes": 344064, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 114688, 
+      "children": [
+       {
+        "nbytes": 114688, 
+        "children": [
+         {
+          "nbytes": 114688, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BF7C", 
+       "line": 91
+      }
+     }, 
+     {
+      "nbytes": 28672, 
+      "children": [
+       {
+        "nbytes": 28672, 
+        "children": [
+         {
+          "nbytes": 28672, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 6590, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 756, 
+   "mem_heap": 494014, 
+   "mem_stack": 0, 
+   "id": 39
+  }, 
+  {
+   "mem_heap_extra": 201890, 
+   "heap_tree": null, 
+   "time": 762, 
+   "mem_heap": 472894, 
+   "mem_stack": 0, 
+   "id": 40
+  }, 
+  {
+   "mem_heap_extra": 200906, 
+   "heap_tree": null, 
+   "time": 772, 
+   "mem_heap": 470598, 
+   "mem_stack": 0, 
+   "id": 41
+  }, 
+  {
+   "mem_heap_extra": 189686, 
+   "heap_tree": null, 
+   "time": 779, 
+   "mem_heap": 444418, 
+   "mem_stack": 0, 
+   "id": 42
+  }, 
+  {
+   "mem_heap_extra": 155582, 
+   "heap_tree": null, 
+   "time": 791, 
+   "mem_heap": 364842, 
+   "mem_stack": 0, 
+   "id": 43
+  }, 
+  {
+   "mem_heap_extra": 139946, 
+   "heap_tree": null, 
+   "time": 806, 
+   "mem_heap": 328358, 
+   "mem_stack": 0, 
+   "id": 44
+  }, 
+  {
+   "mem_heap_extra": 115538, 
+   "heap_tree": null, 
+   "time": 818, 
+   "mem_heap": 271406, 
+   "mem_stack": 0, 
+   "id": 45
+  }, 
+  {
+   "mem_heap_extra": 88718, 
+   "heap_tree": {
+    "nbytes": 208826, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 194180, 
+      "children": [
+       {
+        "nbytes": 194180, 
+        "children": [
+         {
+          "nbytes": 194180, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 12152, 
+      "children": [
+       {
+        "nbytes": 12152, 
+        "children": [
+         {
+          "nbytes": 12152, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 2494, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 830, 
+   "mem_heap": 208826, 
+   "mem_stack": 0, 
+   "id": 46
+  }, 
+  {
+   "mem_heap_extra": 64418, 
+   "heap_tree": null, 
+   "time": 842, 
+   "mem_heap": 152126, 
+   "mem_stack": 0, 
+   "id": 47
+  }, 
+  {
+   "mem_heap_extra": 50066, 
+   "heap_tree": null, 
+   "time": 848, 
+   "mem_heap": 118638, 
+   "mem_stack": 0, 
+   "id": 48
+  }, 
+  {
+   "mem_heap_extra": 30350, 
+   "heap_tree": null, 
+   "time": 857, 
+   "mem_heap": 72634, 
+   "mem_stack": 0, 
+   "id": 49
+  }, 
+  {
+   "mem_heap_extra": 24686, 
+   "heap_tree": {
+    "nbytes": 59418, 
+    "details": null, 
+    "children": [
+     {
+      "nbytes": 53564, 
+      "children": [
+       {
+        "nbytes": 53564, 
+        "children": [
+         {
+          "nbytes": 53564, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BFC0", 
+       "line": 114
+      }
+     }, 
+     {
+      "nbytes": 3360, 
+      "children": [
+       {
+        "nbytes": 3360, 
+        "children": [
+         {
+          "nbytes": 3360, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C88", 
+           "line": 49
+          }
+         }, 
+         {
+          "nbytes": 0, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "DancingLinksSolver::solve(Sudoku&)", 
+         "file": "SudokuSolver.cpp", 
+         "address": "0x804C30F", 
+         "line": 15
+        }
+       }
+      ], 
+      "details": {
+       "function": "DancingLinksSolver::build_cover_matrix(Sudoku&)", 
+       "file": "SudokuSolver.cpp", 
+       "address": "0x804BE5C", 
+       "line": 42
+      }
+     }, 
+     {
+      "nbytes": 2118, 
+      "children": [
+       {
+        "nbytes": 2118, 
+        "children": [
+         {
+          "nbytes": 1536, 
+          "children": [], 
+          "details": {
+           "function": "main", 
+           "file": "memory.cpp", 
+           "address": "0x8049C68", 
+           "line": 47
+          }
+         }, 
+         {
+          "nbytes": 582, 
+          "children": [], 
+          "details": null
+         }
+        ], 
+        "details": {
+         "function": "Sudoku::Sudoku(std::string, unsigned short, unsigned short)", 
+         "file": "stl_vector.h", 
+         "address": "0x804AA3D", 
+         "line": 859
+        }
+       }
+      ], 
+      "details": {
+       "function": "std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> >::_M_fill_insert(__gnu_cxx::__normal_iterator<Sudoku::Cell*, std::vector<Sudoku::Cell, std::allocator<Sudoku::Cell> > >, unsigned int, Sudoku::Cell const&)", 
+       "file": "new_allocator.h", 
+       "address": "0x804B120", 
+       "line": 89
+      }
+     }, 
+     {
+      "nbytes": 376, 
+      "children": [], 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 870, 
+   "mem_heap": 59418, 
+   "mem_stack": 0, 
+   "id": 50
+  }, 
+  {
+   "mem_heap_extra": 11342, 
+   "heap_tree": null, 
+   "time": 877, 
+   "mem_heap": 28282, 
+   "mem_stack": 0, 
+   "id": 51
+  }, 
+  {
+   "mem_heap_extra": 40, 
+   "heap_tree": null, 
+   "time": 883, 
+   "mem_heap": 144, 
+   "mem_stack": 0, 
+   "id": 52
+  }
+ ], 
+ "cmd": "./memory-run", 
+ "peak_snapshot_index": 39, 
+ "detailed_snapshots_index": [
+  6, 
+  7, 
+  9, 
+  10, 
+  15, 
+  25, 
+  28, 
+  35, 
+  39, 
+  46, 
+  50
+ ], 
+ "desc": "--time-unit=ms"
+}

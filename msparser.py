@@ -16,9 +16,9 @@ __all__ = ["parse", "parse_file", "ParseError"]
 _COMMENT_RE = re.compile("\s*(#|$)")
 
 # Precompiled regexes used to parse header fields.
-_FIELD_DESC_RE = re.compile("desc:\s(?P<data>\S+)")
-_FIELD_CMD_RE = re.compile("cmd:\s(?P<data>\S+)")
-_FIELD_TIME_UNIT_RE = re.compile("time_unit:\s(?P<data>ms|B|i)")
+_FIELD_DESC_RE = re.compile("desc:\s(?P<data>.*)$")
+_FIELD_CMD_RE = re.compile("cmd:\s(?P<data>.*)$")
+_FIELD_TIME_UNIT_RE = re.compile("time_unit:\s(?P<data>ms|B|i)$")
 
 # Precompiled regexes used to parse snaphot fields.
 _FIELD_SNAPSHOT_RE = re.compile("snapshot=(?P<data>\d+)")
@@ -120,12 +120,9 @@ def parse(fd):
     mdata["snapshots"] = []
     mdata["detailed_snapshots_index"] = []
 
-    # Parse header data.
-    mdata["desc"] = _get_next_field(ctx, _FIELD_DESC_RE)
-    mdata["cmd"] = _get_next_field(ctx, _FIELD_CMD_RE)
-    mdata["time_unit"] = _get_next_field(ctx, _FIELD_TIME_UNIT_RE)
+    _parse_header(ctx, mdata)
 
-    while _get_next_snapshot(ctx, mdata):
+    while _parse_snapshot(ctx, mdata):
         continue
 
     return mdata
@@ -177,7 +174,13 @@ def _get_next_field(ctx, field_regex, may_reach_eof=False):
     return None
 
 
-def _get_next_snapshot(ctx, mdata):
+def _parse_header(ctx, mdata):
+    mdata["desc"] = _get_next_field(ctx, _FIELD_DESC_RE)
+    mdata["cmd"] = _get_next_field(ctx, _FIELD_CMD_RE)
+    mdata["time_unit"] = _get_next_field(ctx, _FIELD_TIME_UNIT_RE)
+
+
+def _parse_snapshot(ctx, mdata):
     """
     Parse another snapshot, appending it to the mdata["snapshots"] list. On
     EOF, False will be returned.
@@ -196,10 +199,11 @@ def _get_next_snapshot(ctx, mdata):
 
     # Handle the heap_tree field.
     if heap_tree != "empty":
+        snapshot_index = len(mdata["snapshots"])
         if heap_tree == "peak":
-            mdata["peak_snapshot_index"] = snapshot_id
+            mdata["peak_snapshot_index"] = snapshot_index
         heap_tree = _parse_heap_tree(ctx)
-        mdata["detailed_snapshots_index"].append(snapshot_id)
+        mdata["detailed_snapshots_index"].append(snapshot_index)
     else:
         heap_tree = None
 
@@ -217,35 +221,17 @@ def _get_next_snapshot(ctx, mdata):
 
 def _parse_heap_tree(ctx):
     """
-    Parse a snapshot heap tree.
+    Parse a heap tree.
     """
     line = _get_next_line(ctx)
-    match = _match_unconditional(ctx, _HEAP_ENTRY_RE, line)
 
-    children = []
-    for i in range(0, int(match.group("num_children"))):
-        children.append(_parse_heap_node(ctx))
-
-    root_node = {}
-    root_node["details"] = None
-    root_node["nbytes"] = int(match.group("num_bytes"))
-    root_node["children"] = children
-
-    return root_node
-
-
-def _parse_heap_node(ctx):
-    """
-    Parse a normal heap tree node.
-    """
-    line = _get_next_line(ctx)
     entry_match = _match_unconditional(ctx, _HEAP_ENTRY_RE, line)
+    details_group = entry_match.group("details")
 
-    details = entry_match.group("details")
-    if _HEAP_BELOW_THRESHOLD_RE.match(details):
-        details = None
-    else:
-        details_match = _match_unconditional(ctx, _HEAP_DETAILS_RE, details)
+    details = None
+    details_match = _HEAP_DETAILS_RE.match(details_group)
+
+    if details_match:
         # The 'line' field could be None if the binary/library wasn't compiled
         # with debug info. To avoid errors on this condition, we need to make
         # sure that the 'line' field is not None before trying to convert it to
@@ -263,7 +249,7 @@ def _parse_heap_node(ctx):
 
     children = []
     for i in range(0, int(entry_match.group("num_children"))):
-        children.append(_parse_heap_node(ctx))
+        children.append(_parse_heap_tree(ctx))
 
     heap_node = {}
     heap_node["nbytes"] = int(entry_match.group("num_bytes"))

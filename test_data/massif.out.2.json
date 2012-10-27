@@ -1,0 +1,653 @@
+{
+ "time_unit": "i", 
+ "snapshots": [
+  {
+   "id": 0, 
+   "mem_heap": 0, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 0, 
+   "mem_heap_extra": 0
+  }, 
+  {
+   "id": 1, 
+   "mem_heap": 16, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1573952, 
+   "mem_heap_extra": 8
+  }, 
+  {
+   "id": 2, 
+   "mem_heap": 156, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1580099, 
+   "mem_heap_extra": 52
+  }, 
+  {
+   "id": 3, 
+   "mem_heap": 276, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1592142, 
+   "mem_heap_extra": 84
+  }, 
+  {
+   "id": 4, 
+   "mem_heap": 260, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1607216, 
+   "mem_heap_extra": 76
+  }, 
+  {
+   "id": 5, 
+   "mem_heap": 240, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1613112, 
+   "mem_heap_extra": 80
+  }, 
+  {
+   "id": 6, 
+   "mem_heap": 158, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1619853, 
+   "mem_heap_extra": 66
+  }, 
+  {
+   "id": 7, 
+   "mem_heap": 240, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1629353, 
+   "mem_heap_extra": 80
+  }, 
+  {
+   "id": 8, 
+   "mem_heap": 177, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1637390, 
+   "mem_heap_extra": 87
+  }, 
+  {
+   "id": 9, 
+   "mem_heap": 262, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1642322, 
+   "mem_heap_extra": 90
+  }, 
+  {
+   "id": 10, 
+   "mem_heap": 260, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1650697, 
+   "mem_heap_extra": 76
+  }, 
+  {
+   "id": 11, 
+   "mem_heap": 260, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1658696, 
+   "mem_heap_extra": 76
+  }, 
+  {
+   "id": 12, 
+   "mem_heap": 196, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1669880, 
+   "mem_heap_extra": 68
+  }, 
+  {
+   "id": 13, 
+   "mem_heap": 182, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1679675, 
+   "mem_heap_extra": 74
+  }, 
+  {
+   "id": 14, 
+   "mem_heap": 146, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1690073, 
+   "mem_heap_extra": 46
+  }, 
+  {
+   "id": 15, 
+   "mem_heap": 192, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1699154, 
+   "mem_heap_extra": 72
+  }, 
+  {
+   "id": 16, 
+   "mem_heap": 192, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1704793, 
+   "mem_heap_extra": 72
+  }, 
+  {
+   "id": 17, 
+   "mem_heap": 210, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1714592, 
+   "mem_heap_extra": 86
+  }, 
+  {
+   "id": 18, 
+   "mem_heap": 157, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1719491, 
+   "mem_heap_extra": 67
+  }, 
+  {
+   "id": 19, 
+   "mem_heap": 176, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1729121, 
+   "mem_heap_extra": 64
+  }, 
+  {
+   "id": 20, 
+   "mem_heap": 268, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1739460, 
+   "mem_heap_extra": 84
+  }, 
+  {
+   "id": 21, 
+   "mem_heap": 304, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1747135, 
+   "mem_heap_extra": 104
+  }, 
+  {
+   "id": 22, 
+   "mem_heap": 241, 
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "time": 1753609, 
+   "mem_heap_extra": 87
+  }, 
+  {
+   "id": 23, 
+   "mem_heap": 296, 
+   "mem_stack": 0, 
+   "heap_tree": {
+    "details": null, 
+    "nbytes": 296, 
+    "children": [
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [], 
+              "nbytes": 72, 
+              "details": {
+               "line": 783, 
+               "function": "main", 
+               "file": "thompson.cpp", 
+               "address": "0x804D0FB"
+              }
+             }, 
+             {
+              "children": [], 
+              "nbytes": 0, 
+              "details": null
+             }
+            ], 
+            "nbytes": 72, 
+            "details": {
+             "line": 731, 
+             "function": "regex_test(std::string const&, std::string const&, bool)", 
+             "file": "thompson.cpp", 
+             "address": "0x804BE72"
+            }
+           }
+          ], 
+          "nbytes": 72, 
+          "details": {
+           "line": 509, 
+           "function": "thompson::RegexParser::parse(std::string const&)", 
+           "file": "thompson.cpp", 
+           "address": "0x80548C8"
+          }
+         }
+        ], 
+        "nbytes": 72, 
+        "details": {
+         "line": 545, 
+         "function": "thompson::RegexParser::parse_regexp()", 
+         "file": "thompson.cpp", 
+         "address": "0x8053849"
+        }
+       }
+      ], 
+      "nbytes": 72, 
+      "details": {
+       "line": 249, 
+       "function": "thompson::RegexParser::parse_branch()", 
+       "file": "thompson.cpp", 
+       "address": "0x80531E2"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [], 
+          "nbytes": 72, 
+          "details": {
+           "line": 783, 
+           "function": "main", 
+           "file": "thompson.cpp", 
+           "address": "0x804D0FB"
+          }
+         }, 
+         {
+          "children": [], 
+          "nbytes": 0, 
+          "details": null
+         }
+        ], 
+        "nbytes": 72, 
+        "details": {
+         "line": 731, 
+         "function": "regex_test(std::string const&, std::string const&, bool)", 
+         "file": "thompson.cpp", 
+         "address": "0x804BE72"
+        }
+       }
+      ], 
+      "nbytes": 72, 
+      "details": {
+       "line": 192, 
+       "function": "thompson::RegexParser::parse(std::string const&)", 
+       "file": "thompson.cpp", 
+       "address": "0x80547F6"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [], 
+            "nbytes": 21, 
+            "details": {
+             "line": 783, 
+             "function": "main", 
+             "file": "thompson.cpp", 
+             "address": "0x804D0D9"
+            }
+           }, 
+           {
+            "children": [], 
+            "nbytes": 15, 
+            "details": {
+             "line": 783, 
+             "function": "main", 
+             "file": "thompson.cpp", 
+             "address": "0x804D0B7"
+            }
+           }, 
+           {
+            "children": [], 
+            "nbytes": 0, 
+            "details": null
+           }
+          ], 
+          "nbytes": 36, 
+          "details": {
+           "line": null, 
+           "function": "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)", 
+           "file": "/usr/lib/libstdc++.so.6.0.14", 
+           "address": "0xA0B703"
+          }
+         }
+        ], 
+        "nbytes": 36, 
+        "details": {
+         "line": null, 
+         "function": "char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag)", 
+         "file": "/usr/lib/libstdc++.so.6.0.14", 
+         "address": "0xA0AF63"
+        }
+       }, 
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [], 
+                "nbytes": 21, 
+                "details": {
+                 "line": 783, 
+                 "function": "main", 
+                 "file": "thompson.cpp", 
+                 "address": "0x804D0FB"
+                }
+               }, 
+               {
+                "children": [], 
+                "nbytes": 0, 
+                "details": null
+               }
+              ], 
+              "nbytes": 21, 
+              "details": {
+               "line": 731, 
+               "function": "regex_test(std::string const&, std::string const&, bool)", 
+               "file": "thompson.cpp", 
+               "address": "0x804BE72"
+              }
+             }
+            ], 
+            "nbytes": 21, 
+            "details": {
+             "line": 303, 
+             "function": "thompson::RegexParser::parse(std::string const&)", 
+             "file": "basic_string.h", 
+             "address": "0x8054A37"
+            }
+           }, 
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [], 
+                "nbytes": 15, 
+                "details": {
+                 "line": 783, 
+                 "function": "main", 
+                 "file": "thompson.cpp", 
+                 "address": "0x804D0FB"
+                }
+               }, 
+               {
+                "children": [], 
+                "nbytes": 0, 
+                "details": null
+               }
+              ], 
+              "nbytes": 15, 
+              "details": {
+               "line": 303, 
+               "function": "regex_test(std::string const&, std::string const&, bool)", 
+               "file": "thompson.cpp", 
+               "address": "0x804BEF5"
+              }
+             }
+            ], 
+            "nbytes": 15, 
+            "details": {
+             "line": 303, 
+             "function": "thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*)", 
+             "file": "basic_string.h", 
+             "address": "0x8051579"
+            }
+           }
+          ], 
+          "nbytes": 36, 
+          "details": {
+           "line": null, 
+           "function": "std::string::_M_leak_hard()", 
+           "file": "/usr/lib/libstdc++.so.6.0.14", 
+           "address": "0xA09CDD"
+          }
+         }
+        ], 
+        "nbytes": 36, 
+        "details": {
+         "line": null, 
+         "function": "std::string::_M_mutate(unsigned int, unsigned int, unsigned int)", 
+         "file": "/usr/lib/libstdc++.so.6.0.14", 
+         "address": "0xA08FE6"
+        }
+       }
+      ], 
+      "nbytes": 72, 
+      "details": {
+       "line": null, 
+       "function": "std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)", 
+       "file": "/usr/lib/libstdc++.so.6.0.14", 
+       "address": "0xA08D04"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [], 
+          "nbytes": 28, 
+          "details": {
+           "line": 783, 
+           "function": "main", 
+           "file": "thompson.cpp", 
+           "address": "0x804D0FB"
+          }
+         }, 
+         {
+          "children": [], 
+          "nbytes": 0, 
+          "details": null
+         }
+        ], 
+        "nbytes": 28, 
+        "details": {
+         "line": 731, 
+         "function": "regex_test(std::string const&, std::string const&, bool)", 
+         "file": "thompson.cpp", 
+         "address": "0x804BE72"
+        }
+       }
+      ], 
+      "nbytes": 28, 
+      "details": {
+       "line": 89, 
+       "function": "thompson::RegexParser::parse(std::string const&)", 
+       "file": "new_allocator.h", 
+       "address": "0x80547B4"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "children": [], 
+                "nbytes": 20, 
+                "details": {
+                 "line": 783, 
+                 "function": "main", 
+                 "file": "thompson.cpp", 
+                 "address": "0x804D0FB"
+                }
+               }, 
+               {
+                "children": [], 
+                "nbytes": 0, 
+                "details": null
+               }
+              ], 
+              "nbytes": 20, 
+              "details": {
+               "line": 303, 
+               "function": "regex_test(std::string const&, std::string const&, bool)", 
+               "file": "thompson.cpp", 
+               "address": "0x804BEF5"
+              }
+             }
+            ], 
+            "nbytes": 20, 
+            "details": {
+             "line": 666, 
+             "function": "thompson::ThompsonAlgorithm::visit_nfa(thompson::internal::State const*, thompson::internal::State const*)", 
+             "file": "thompson.cpp", 
+             "address": "0x80514FF"
+            }
+           }, 
+           {
+            "children": [], 
+            "nbytes": 0, 
+            "details": null
+           }
+          ], 
+          "nbytes": 20, 
+          "details": {
+           "line": 408, 
+           "function": "thompson::ThompsonAlgorithm::visit_transition(thompson::internal::Transition const*)", 
+           "file": "stl_set.h", 
+           "address": "0x8051445"
+          }
+         }, 
+         {
+          "children": [], 
+          "nbytes": 0, 
+          "details": null
+         }
+        ], 
+        "nbytes": 20, 
+        "details": {
+         "line": 1196, 
+         "function": "std::_Rb_tree<thompson::internal::State const*, thompson::internal::State const*, std::_Identity<thompson::internal::State const*>, std::less<thompson::internal::State const*>, std::allocator<thompson::internal::State const*> >::_M_insert_unique(thompson::internal::State const* const&)", 
+         "file": "stl_tree.h", 
+         "address": "0x80513E7"
+        }
+       }
+      ], 
+      "nbytes": 20, 
+      "details": {
+       "line": 89, 
+       "function": "std::_Rb_tree<thompson::internal::State const*, thompson::internal::State const*, std::_Identity<thompson::internal::State const*>, std::less<thompson::internal::State const*>, std::allocator<thompson::internal::State const*> >::_M_insert_(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*, thompson::internal::State const* const&)", 
+       "file": "new_allocator.h", 
+       "address": "0x80512CB"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [], 
+          "nbytes": 16, 
+          "details": {
+           "line": 783, 
+           "function": "main", 
+           "file": "thompson.cpp", 
+           "address": "0x804D0FB"
+          }
+         }, 
+         {
+          "children": [], 
+          "nbytes": 0, 
+          "details": null
+         }
+        ], 
+        "nbytes": 16, 
+        "details": {
+         "line": 731, 
+         "function": "regex_test(std::string const&, std::string const&, bool)", 
+         "file": "thompson.cpp", 
+         "address": "0x804BE72"
+        }
+       }
+      ], 
+      "nbytes": 16, 
+      "details": {
+       "line": 487, 
+       "function": "thompson::RegexParser::parse(std::string const&)", 
+       "file": "thompson.cpp", 
+       "address": "0x8054945"
+      }
+     }, 
+     {
+      "children": [
+       {
+        "children": [
+         {
+          "children": [], 
+          "nbytes": 16, 
+          "details": {
+           "line": 783, 
+           "function": "main", 
+           "file": "thompson.cpp", 
+           "address": "0x804D0FB"
+          }
+         }, 
+         {
+          "children": [], 
+          "nbytes": 0, 
+          "details": null
+         }
+        ], 
+        "nbytes": 16, 
+        "details": {
+         "line": 731, 
+         "function": "regex_test(std::string const&, std::string const&, bool)", 
+         "file": "thompson.cpp", 
+         "address": "0x804BE72"
+        }
+       }
+      ], 
+      "nbytes": 16, 
+      "details": {
+       "line": 244, 
+       "function": "thompson::RegexParser::parse(std::string const&)", 
+       "file": "shared_ptr_base.h", 
+       "address": "0x8054989"
+      }
+     }, 
+     {
+      "children": [], 
+      "nbytes": 0, 
+      "details": null
+     }
+    ]
+   }, 
+   "time": 1765962, 
+   "mem_heap_extra": 96
+  }
+ ], 
+ "detailed_snapshots_index": [
+  23
+ ], 
+ "cmd": "./thompson", 
+ "desc": "--time-unit=i"
+}

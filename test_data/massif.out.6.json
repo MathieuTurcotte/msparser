@@ -1,0 +1,2545 @@
+{
+ "peak_snapshot_index": 2, 
+ "desc": "--pages-as-heap=yes", 
+ "cmd": "python ../../stime.py 3 ../../hello.exe", 
+ "time_unit": "i", 
+ "snapshots": [
+  {
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "mem_heap": 2560000, 
+   "time": 0, 
+   "mem_heap_extra": 0, 
+   "id": 0
+  }, 
+  {
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "mem_heap": 30035968, 
+   "time": 100279, 
+   "mem_heap_extra": 0, 
+   "id": 1
+  }, 
+  {
+   "mem_stack": 0, 
+   "heap_tree": {
+    "nbytes": 165990400, 
+    "children": [
+     {
+      "nbytes": 111468544, 
+      "details": {
+       "address": "0x5E70169", 
+       "file": "syscall-template.S", 
+       "function": "mmap", 
+       "line": 82
+      }, 
+      "children": [
+       {
+        "nbytes": 83079168, 
+        "details": {
+         "address": "0x5DFE377", 
+         "file": "arena.c", 
+         "function": "new_heap", 
+         "line": 554
+        }, 
+        "children": [
+         {
+          "nbytes": 83079168, 
+          "details": {
+           "address": "0x5DFF2B3", 
+           "file": "arena.c", 
+           "function": "arena_get2.isra.5.part.6", 
+           "line": 712
+          }, 
+          "children": [
+           {
+            "nbytes": 83079168, 
+            "details": {
+             "address": "0x5E031E7", 
+             "file": "arena.c", 
+             "function": "malloc", 
+             "line": 824
+            }, 
+            "children": [
+             {
+              "nbytes": 83079168, 
+              "details": {
+               "address": "0x4D3286", 
+               "file": "/usr/bin/python2.7", 
+               "function": "???", 
+               "line": null
+              }, 
+              "children": [
+               {
+                "nbytes": 83079168, 
+                "details": {
+                 "address": "0x4D348A", 
+                 "file": "/usr/bin/python2.7", 
+                 "function": "PyGILState_Ensure", 
+                 "line": null
+                }, 
+                "children": [
+                 {
+                  "nbytes": 83079168, 
+                  "details": {
+                   "address": "0x64E2DB9", 
+                   "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+                   "function": "SandboxPolicy_entry", 
+                   "line": null
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 83079168, 
+                    "details": {
+                     "address": "0x66EDE5E", 
+                     "file": "/usr/lib/libsandbox.so.0.3.5", 
+                     "function": "sandbox_watcher", 
+                     "line": null
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 83079168, 
+                      "details": {
+                       "address": "0x4C2EE98", 
+                       "file": "pthread_create.c", 
+                       "function": "start_thread", 
+                       "line": 308
+                      }, 
+                      "children": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }, 
+       {
+        "nbytes": 25178112, 
+        "details": {
+         "address": "0x4C2FA2C", 
+         "file": "allocatestack.c", 
+         "function": "pthread_create@@GLIBC_2.2.5", 
+         "line": 495
+        }, 
+        "children": [
+         {
+          "nbytes": 8392704, 
+          "details": {
+           "address": "0x400F304", 
+           "file": "dl-init.c", 
+           "function": "call_init.part.0", 
+           "line": 85
+          }, 
+          "children": [
+           {
+            "nbytes": 8392704, 
+            "details": {
+             "address": "0x400F3DD", 
+             "file": "dl-init.c", 
+             "function": "_dl_init", 
+             "line": 52
+            }, 
+            "children": [
+             {
+              "nbytes": 8392704, 
+              "details": {
+               "address": "0x4013AD8", 
+               "file": "dl-open.c", 
+               "function": "dl_open_worker", 
+               "line": 549
+              }, 
+              "children": [
+               {
+                "nbytes": 8392704, 
+                "details": {
+                 "address": "0x400F174", 
+                 "file": "dl-error.c", 
+                 "function": "_dl_catch_error", 
+                 "line": 178
+                }, 
+                "children": [
+                 {
+                  "nbytes": 8392704, 
+                  "details": {
+                   "address": "0x4013318", 
+                   "file": "dl-open.c", 
+                   "function": "_dl_open", 
+                   "line": 639
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 8392704, 
+                    "details": {
+                     "address": "0x4E44F24", 
+                     "file": "dlopen.c", 
+                     "function": "dlopen_doit", 
+                     "line": 67
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 8392704, 
+                      "details": {
+                       "address": "0x400F174", 
+                       "file": "dl-error.c", 
+                       "function": "_dl_catch_error", 
+                       "line": 178
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 8392704, 
+                        "details": {
+                         "address": "0x4E4552D", 
+                         "file": "dlerror.c", 
+                         "function": "_dlerror_run", 
+                         "line": 164
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 8392704, 
+                          "details": {
+                           "address": "0x4E44FBF", 
+                           "file": "dlopen.c", 
+                           "function": "dlopen@@GLIBC_2.2.5", 
+                           "line": 88
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 8392704, 
+                            "details": {
+                             "address": "0x561838", 
+                             "file": "/usr/bin/python2.7", 
+                             "function": "_PyImport_GetDynLoadFunc", 
+                             "line": null
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 8392704, 
+                              "details": {
+                               "address": "0x47AF17", 
+                               "file": "/usr/bin/python2.7", 
+                               "function": "_PyImport_LoadDynamicModule", 
+                               "line": null
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 8392704, 
+                                "details": {
+                                 "address": "0x53D7D9", 
+                                 "file": "/usr/bin/python2.7", 
+                                 "function": "???", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 8392704, 
+                                  "details": {
+                                   "address": "0x53DCA8", 
+                                   "file": "/usr/bin/python2.7", 
+                                   "function": "???", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 8392704, 
+                                    "details": {
+                                     "address": "0x53E1B1", 
+                                     "file": "/usr/bin/python2.7", 
+                                     "function": "???", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 8392704, 
+                                      "details": {
+                                       "address": "0x4C2E69", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "???", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 8392704, 
+                                        "details": {
+                                         "address": "0x4E9F34", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "PyObject_Call", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 8392704, 
+                                          "details": {
+                                           "address": "0x4EA394", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "PyEval_CallObjectWithKeywords", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 8392704, 
+                                            "details": {
+                                             "address": "0x49A4EB", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyEval_EvalFrameEx", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 8392704, 
+                                              "details": {
+                                               "address": "0x49F1BE", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyEval_EvalCodeEx", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 8392704, 
+                                                "details": {
+                                                 "address": "0x4A7F16", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyImport_ExecCodeModuleEx", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 8392704, 
+                                                  "details": {
+                                                   "address": "0x53CDDF", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "???", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 8392704, 
+                                                    "details": {
+                                                     "address": "0x4A4189", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "???", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 8392704, 
+                                                      "details": {
+                                                       "address": "0x53D7D9", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "???", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 8392704, 
+                                                        "details": {
+                                                         "address": "0x4FC1A1", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "???", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 8392704, 
+                                                          "details": {
+                                                           "address": "0x53E0A2", 
+                                                           "file": "/usr/bin/python2.7", 
+                                                           "function": "???", 
+                                                           "line": null
+                                                          }, 
+                                                          "children": [
+                                                           {
+                                                            "nbytes": 8392704, 
+                                                            "details": {
+                                                             "address": "0x4C2E69", 
+                                                             "file": "/usr/bin/python2.7", 
+                                                             "function": "???", 
+                                                             "line": null
+                                                            }, 
+                                                            "children": [
+                                                             {
+                                                              "nbytes": 8392704, 
+                                                              "details": {
+                                                               "address": "0x4E9F34", 
+                                                               "file": "/usr/bin/python2.7", 
+                                                               "function": "PyObject_Call", 
+                                                               "line": null
+                                                              }, 
+                                                              "children": [
+                                                               {
+                                                                "nbytes": 8392704, 
+                                                                "details": {
+                                                                 "address": "0x4EA394", 
+                                                                 "file": "/usr/bin/python2.7", 
+                                                                 "function": "PyEval_CallObjectWithKeywords", 
+                                                                 "line": null
+                                                                }, 
+                                                                "children": []
+                                                               }
+                                                              ]
+                                                             }
+                                                            ]
+                                                           }
+                                                          ]
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }, 
+         {
+          "nbytes": 8392704, 
+          "details": {
+           "address": "0x66F02FD", 
+           "file": "/usr/lib/libsandbox.so.0.3.5", 
+           "function": "sandbox_execute", 
+           "line": null
+          }, 
+          "children": [
+           {
+            "nbytes": 8392704, 
+            "details": {
+             "address": "0x64E1D7C", 
+             "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+             "function": "Sandbox_run", 
+             "line": null
+            }, 
+            "children": [
+             {
+              "nbytes": 8392704, 
+              "details": {
+               "address": "0x498908", 
+               "file": "/usr/bin/python2.7", 
+               "function": "PyEval_EvalFrameEx", 
+               "line": null
+              }, 
+              "children": [
+               {
+                "nbytes": 8392704, 
+                "details": {
+                 "address": "0x498600", 
+                 "file": "/usr/bin/python2.7", 
+                 "function": "PyEval_EvalFrameEx", 
+                 "line": null
+                }, 
+                "children": [
+                 {
+                  "nbytes": 8392704, 
+                  "details": {
+                   "address": "0x49F1BE", 
+                   "file": "/usr/bin/python2.7", 
+                   "function": "PyEval_EvalCodeEx", 
+                   "line": null
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 8392704, 
+                    "details": {
+                     "address": "0x4A907F", 
+                     "file": "/usr/bin/python2.7", 
+                     "function": "PyRun_FileExFlags", 
+                     "line": null
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 8392704, 
+                      "details": {
+                       "address": "0x4A930F", 
+                       "file": "/usr/bin/python2.7", 
+                       "function": "PyRun_SimpleFileExFlags", 
+                       "line": null
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 8392704, 
+                        "details": {
+                         "address": "0x4AA8BB", 
+                         "file": "/usr/bin/python2.7", 
+                         "function": "Py_Main", 
+                         "line": null
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 8392704, 
+                          "details": {
+                           "address": "0x5DA176B", 
+                           "file": "libc-start.c", 
+                           "function": "(below main)", 
+                           "line": 226
+                          }, 
+                          "children": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }, 
+         {
+          "nbytes": 8392704, 
+          "details": {
+           "address": "0x66F0322", 
+           "file": "/usr/lib/libsandbox.so.0.3.5", 
+           "function": "sandbox_execute", 
+           "line": null
+          }, 
+          "children": [
+           {
+            "nbytes": 8392704, 
+            "details": {
+             "address": "0x64E1D7C", 
+             "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+             "function": "Sandbox_run", 
+             "line": null
+            }, 
+            "children": [
+             {
+              "nbytes": 8392704, 
+              "details": {
+               "address": "0x498908", 
+               "file": "/usr/bin/python2.7", 
+               "function": "PyEval_EvalFrameEx", 
+               "line": null
+              }, 
+              "children": [
+               {
+                "nbytes": 8392704, 
+                "details": {
+                 "address": "0x498600", 
+                 "file": "/usr/bin/python2.7", 
+                 "function": "PyEval_EvalFrameEx", 
+                 "line": null
+                }, 
+                "children": [
+                 {
+                  "nbytes": 8392704, 
+                  "details": {
+                   "address": "0x49F1BE", 
+                   "file": "/usr/bin/python2.7", 
+                   "function": "PyEval_EvalCodeEx", 
+                   "line": null
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 8392704, 
+                    "details": {
+                     "address": "0x4A907F", 
+                     "file": "/usr/bin/python2.7", 
+                     "function": "PyRun_FileExFlags", 
+                     "line": null
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 8392704, 
+                      "details": {
+                       "address": "0x4A930F", 
+                       "file": "/usr/bin/python2.7", 
+                       "function": "PyRun_SimpleFileExFlags", 
+                       "line": null
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 8392704, 
+                        "details": {
+                         "address": "0x4AA8BB", 
+                         "file": "/usr/bin/python2.7", 
+                         "function": "Py_Main", 
+                         "line": null
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 8392704, 
+                          "details": {
+                           "address": "0x5DA176B", 
+                           "file": "libc-start.c", 
+                           "function": "(below main)", 
+                           "line": 226
+                          }, 
+                          "children": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }, 
+       {
+        "nbytes": 3211264, 
+        "details": null, 
+        "children": []
+       }
+      ]
+     }, 
+     {
+      "nbytes": 50274304, 
+      "details": {
+       "address": "0x4018429", 
+       "file": "syscall-template.S", 
+       "function": "mmap", 
+       "line": 82
+      }, 
+      "children": [
+       {
+        "nbytes": 45649920, 
+        "details": {
+         "address": "0x4006B67", 
+         "file": "dl-load.c", 
+         "function": "_dl_map_object_from_fd", 
+         "line": 1283
+        }, 
+        "children": [
+         {
+          "nbytes": 45649920, 
+          "details": {
+           "address": "0x4008698", 
+           "file": "dl-load.c", 
+           "function": "_dl_map_object", 
+           "line": 2568
+          }, 
+          "children": [
+           {
+            "nbytes": 37122048, 
+            "details": {
+             "address": "0x400CFE0", 
+             "file": "dl-deps.c", 
+             "function": "openaux", 
+             "line": 65
+            }, 
+            "children": [
+             {
+              "nbytes": 37122048, 
+              "details": {
+               "address": "0x400F174", 
+               "file": "dl-error.c", 
+               "function": "_dl_catch_error", 
+               "line": 178
+              }, 
+              "children": [
+               {
+                "nbytes": 37122048, 
+                "details": {
+                 "address": "0x400D6BC", 
+                 "file": "dl-deps.c", 
+                 "function": "_dl_map_object_deps", 
+                 "line": 258
+                }, 
+                "children": [
+                 {
+                  "nbytes": 24305664, 
+                  "details": {
+                   "address": "0x400350B", 
+                   "file": "rtld.c", 
+                   "function": "dl_main", 
+                   "line": 1826
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 24305664, 
+                    "details": {
+                     "address": "0x4015B22", 
+                     "file": "dl-sysdep.c", 
+                     "function": "_dl_sysdep_start", 
+                     "line": 244
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 24305664, 
+                      "details": {
+                       "address": "0x4005363", 
+                       "file": "rtld.c", 
+                       "function": "_dl_start", 
+                       "line": 338
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 24305664, 
+                        "details": {
+                         "address": "0x40016B6", 
+                         "file": "/lib/x86_64-linux-gnu/ld-2.15.so", 
+                         "function": "???", 
+                         "line": null
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 24305664, 
+                          "details": {
+                           "address": "0x2", 
+                           "file": null, 
+                           "function": "???", 
+                           "line": null
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 24305664, 
+                            "details": {
+                             "address": "0x7FF0007A5", 
+                             "file": null, 
+                             "function": "???", 
+                             "line": null
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 24305664, 
+                              "details": {
+                               "address": "0x7FF0007AC", 
+                               "file": null, 
+                               "function": "???", 
+                               "line": null
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 24305664, 
+                                "details": {
+                                 "address": "0x7FF0007BB", 
+                                 "file": null, 
+                                 "function": "???", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 24305664, 
+                                  "details": {
+                                   "address": "0x7FF0007BD", 
+                                   "file": null, 
+                                   "function": "???", 
+                                   "line": null
+                                  }, 
+                                  "children": []
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }, 
+                 {
+                  "nbytes": 12816384, 
+                  "details": {
+                   "address": "0x40138A7", 
+                   "file": "dl-open.c", 
+                   "function": "dl_open_worker", 
+                   "line": 262
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 12816384, 
+                    "details": {
+                     "address": "0x400F174", 
+                     "file": "dl-error.c", 
+                     "function": "_dl_catch_error", 
+                     "line": 178
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 12816384, 
+                      "details": {
+                       "address": "0x4013318", 
+                       "file": "dl-open.c", 
+                       "function": "_dl_open", 
+                       "line": 639
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 8462336, 
+                        "details": {
+                         "address": "0x4E44F24", 
+                         "file": "dlopen.c", 
+                         "function": "dlopen_doit", 
+                         "line": 67
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 8462336, 
+                          "details": {
+                           "address": "0x400F174", 
+                           "file": "dl-error.c", 
+                           "function": "_dl_catch_error", 
+                           "line": 178
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 8462336, 
+                            "details": {
+                             "address": "0x4E4552D", 
+                             "file": "dlerror.c", 
+                             "function": "_dlerror_run", 
+                             "line": 164
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 8462336, 
+                              "details": {
+                               "address": "0x4E44FBF", 
+                               "file": "dlopen.c", 
+                               "function": "dlopen@@GLIBC_2.2.5", 
+                               "line": 88
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 8462336, 
+                                "details": {
+                                 "address": "0x561838", 
+                                 "file": "/usr/bin/python2.7", 
+                                 "function": "_PyImport_GetDynLoadFunc", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 8462336, 
+                                  "details": {
+                                   "address": "0x47AF17", 
+                                   "file": "/usr/bin/python2.7", 
+                                   "function": "_PyImport_LoadDynamicModule", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 8462336, 
+                                    "details": {
+                                     "address": "0x53D7D9", 
+                                     "file": "/usr/bin/python2.7", 
+                                     "function": "???", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 8462336, 
+                                      "details": {
+                                       "address": "0x53DCA8", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "???", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 8462336, 
+                                        "details": {
+                                         "address": "0x53E1B1", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "???", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 8462336, 
+                                          "details": {
+                                           "address": "0x4C2E69", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "???", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 8462336, 
+                                            "details": {
+                                             "address": "0x4E9F34", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyObject_Call", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 8462336, 
+                                              "details": {
+                                               "address": "0x4EA394", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyEval_CallObjectWithKeywords", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 8462336, 
+                                                "details": {
+                                                 "address": "0x49A4EB", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyEval_EvalFrameEx", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 8462336, 
+                                                  "details": {
+                                                   "address": "0x49F1BE", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "PyEval_EvalCodeEx", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 8462336, 
+                                                    "details": {
+                                                     "address": "0x4A7F16", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "PyImport_ExecCodeModuleEx", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 8462336, 
+                                                      "details": {
+                                                       "address": "0x53CDDF", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "???", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 8462336, 
+                                                        "details": {
+                                                         "address": "0x4A4189", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "???", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 8462336, 
+                                                          "details": {
+                                                           "address": "0x53D7D9", 
+                                                           "file": "/usr/bin/python2.7", 
+                                                           "function": "???", 
+                                                           "line": null
+                                                          }, 
+                                                          "children": [
+                                                           {
+                                                            "nbytes": 8462336, 
+                                                            "details": {
+                                                             "address": "0x4FC1A1", 
+                                                             "file": "/usr/bin/python2.7", 
+                                                             "function": "???", 
+                                                             "line": null
+                                                            }, 
+                                                            "children": [
+                                                             {
+                                                              "nbytes": 8462336, 
+                                                              "details": {
+                                                               "address": "0x53E0A2", 
+                                                               "file": "/usr/bin/python2.7", 
+                                                               "function": "???", 
+                                                               "line": null
+                                                              }, 
+                                                              "children": [
+                                                               {
+                                                                "nbytes": 8462336, 
+                                                                "details": {
+                                                                 "address": "0x4C2E69", 
+                                                                 "file": "/usr/bin/python2.7", 
+                                                                 "function": "???", 
+                                                                 "line": null
+                                                                }, 
+                                                                "children": []
+                                                               }
+                                                              ]
+                                                             }
+                                                            ]
+                                                           }
+                                                          ]
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }, 
+                       {
+                        "nbytes": 4354048, 
+                        "details": {
+                         "address": "0x5EB0700", 
+                         "file": "dl-libc.c", 
+                         "function": "do_dlopen", 
+                         "line": 89
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 4354048, 
+                          "details": {
+                           "address": "0x400F174", 
+                           "file": "dl-error.c", 
+                           "function": "_dl_catch_error", 
+                           "line": 178
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 4354048, 
+                            "details": {
+                             "address": "0x5EB07C2", 
+                             "file": "dl-libc.c", 
+                             "function": "__libc_dlopen_mode", 
+                             "line": 48
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 4354048, 
+                              "details": {
+                               "address": "0x5E85B1C", 
+                               "file": "nsswitch.c", 
+                               "function": "nss_load_library.isra.1", 
+                               "line": 372
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 4354048, 
+                                "details": {
+                                 "address": "0x5E8657B", 
+                                 "file": "nsswitch.c", 
+                                 "function": "__nss_lookup_function", 
+                                 "line": 474
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 2203648, 
+                                  "details": {
+                                   "address": "0x5E8678A", 
+                                   "file": "nsswitch.c", 
+                                   "function": "__nss_lookup", 
+                                   "line": 202
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 2203648, 
+                                    "details": {
+                                     "address": "0x5E3EE16", 
+                                     "file": "getXXbyYY_r.c", 
+                                     "function": "getpwuid_r@@GLIBC_2.2.5", 
+                                     "line": 203
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 2203648, 
+                                      "details": {
+                                       "address": "0x5E3E5F1", 
+                                       "file": "getXXbyYY.c", 
+                                       "function": "getpwuid", 
+                                       "line": 117
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 2203648, 
+                                        "details": {
+                                         "address": "0x66EFD6F", 
+                                         "file": "/usr/lib/libsandbox.so.0.3.5", 
+                                         "function": "sandbox_check", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 2203648, 
+                                          "details": {
+                                           "address": "0x64E2D1E", 
+                                           "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+                                           "function": "Sandbox_new", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 2203648, 
+                                            "details": {
+                                             "address": "0x4DB5E6", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "???", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 2203648, 
+                                              "details": {
+                                               "address": "0x4E9F34", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyObject_Call", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 2203648, 
+                                                "details": {
+                                                 "address": "0x498468", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyEval_EvalFrameEx", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 2203648, 
+                                                  "details": {
+                                                   "address": "0x49F1BE", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "PyEval_EvalCodeEx", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 2203648, 
+                                                    "details": {
+                                                     "address": "0x4A907F", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "PyRun_FileExFlags", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 2203648, 
+                                                      "details": {
+                                                       "address": "0x4A930F", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "PyRun_SimpleFileExFlags", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 2203648, 
+                                                        "details": {
+                                                         "address": "0x4AA8BB", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "Py_Main", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 2203648, 
+                                                          "details": {
+                                                           "address": "0x5DA176B", 
+                                                           "file": "libc-start.c", 
+                                                           "function": "(below main)", 
+                                                           "line": 226
+                                                          }, 
+                                                          "children": []
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }, 
+                                 {
+                                  "nbytes": 2150400, 
+                                  "details": {
+                                   "address": "0x770063D", 
+                                   "file": null, 
+                                   "function": "???", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 2150400, 
+                                    "details": {
+                                     "address": "0x5E3ECFB", 
+                                     "file": "getXXbyYY_r.c", 
+                                     "function": "getpwuid_r@@GLIBC_2.2.5", 
+                                     "line": 256
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 2150400, 
+                                      "details": {
+                                       "address": "0x5E3E5F1", 
+                                       "file": "getXXbyYY.c", 
+                                       "function": "getpwuid", 
+                                       "line": 117
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 2150400, 
+                                        "details": {
+                                         "address": "0x66EFD6F", 
+                                         "file": "/usr/lib/libsandbox.so.0.3.5", 
+                                         "function": "sandbox_check", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 2150400, 
+                                          "details": {
+                                           "address": "0x64E2D1E", 
+                                           "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+                                           "function": "Sandbox_new", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 2150400, 
+                                            "details": {
+                                             "address": "0x4DB5E6", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "???", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 2150400, 
+                                              "details": {
+                                               "address": "0x4E9F34", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyObject_Call", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 2150400, 
+                                                "details": {
+                                                 "address": "0x498468", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyEval_EvalFrameEx", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 2150400, 
+                                                  "details": {
+                                                   "address": "0x49F1BE", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "PyEval_EvalCodeEx", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 2150400, 
+                                                    "details": {
+                                                     "address": "0x4A907F", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "PyRun_FileExFlags", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 2150400, 
+                                                      "details": {
+                                                       "address": "0x4A930F", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "PyRun_SimpleFileExFlags", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 2150400, 
+                                                        "details": {
+                                                         "address": "0x4AA8BB", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "Py_Main", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 2150400, 
+                                                          "details": {
+                                                           "address": "0x5DA176B", 
+                                                           "file": "libc-start.c", 
+                                                           "function": "(below main)", 
+                                                           "line": 226
+                                                          }, 
+                                                          "children": []
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }, 
+           {
+            "nbytes": 6422528, 
+            "details": {
+             "address": "0x4013849", 
+             "file": "dl-open.c", 
+             "function": "dl_open_worker", 
+             "line": 225
+            }, 
+            "children": [
+             {
+              "nbytes": 6422528, 
+              "details": {
+               "address": "0x400F174", 
+               "file": "dl-error.c", 
+               "function": "_dl_catch_error", 
+               "line": 178
+              }, 
+              "children": [
+               {
+                "nbytes": 6422528, 
+                "details": {
+                 "address": "0x4013318", 
+                 "file": "dl-open.c", 
+                 "function": "_dl_open", 
+                 "line": 639
+                }, 
+                "children": [
+                 {
+                  "nbytes": 4280320, 
+                  "details": {
+                   "address": "0x5EB0700", 
+                   "file": "dl-libc.c", 
+                   "function": "do_dlopen", 
+                   "line": 89
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 4280320, 
+                    "details": {
+                     "address": "0x400F174", 
+                     "file": "dl-error.c", 
+                     "function": "_dl_catch_error", 
+                     "line": 178
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 4280320, 
+                      "details": {
+                       "address": "0x5EB07C2", 
+                       "file": "dl-libc.c", 
+                       "function": "__libc_dlopen_mode", 
+                       "line": 48
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 4280320, 
+                        "details": {
+                         "address": "0x5E85B1C", 
+                         "file": "nsswitch.c", 
+                         "function": "nss_load_library.isra.1", 
+                         "line": 372
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 4280320, 
+                          "details": {
+                           "address": "0x5E8657B", 
+                           "file": "nsswitch.c", 
+                           "function": "__nss_lookup_function", 
+                           "line": 474
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 2146304, 
+                            "details": {
+                             "address": "0x770063D", 
+                             "file": null, 
+                             "function": "???", 
+                             "line": null
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 2146304, 
+                              "details": {
+                               "address": "0x5E3ECFB", 
+                               "file": "getXXbyYY_r.c", 
+                               "function": "getpwuid_r@@GLIBC_2.2.5", 
+                               "line": 256
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 2146304, 
+                                "details": {
+                                 "address": "0x5E3E5F1", 
+                                 "file": "getXXbyYY.c", 
+                                 "function": "getpwuid", 
+                                 "line": 117
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 2146304, 
+                                  "details": {
+                                   "address": "0x66EFD6F", 
+                                   "file": "/usr/lib/libsandbox.so.0.3.5", 
+                                   "function": "sandbox_check", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 2146304, 
+                                    "details": {
+                                     "address": "0x64E2D1E", 
+                                     "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+                                     "function": "Sandbox_new", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 2146304, 
+                                      "details": {
+                                       "address": "0x4DB5E6", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "???", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 2146304, 
+                                        "details": {
+                                         "address": "0x4E9F34", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "PyObject_Call", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 2146304, 
+                                          "details": {
+                                           "address": "0x498468", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "PyEval_EvalFrameEx", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 2146304, 
+                                            "details": {
+                                             "address": "0x49F1BE", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyEval_EvalCodeEx", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 2146304, 
+                                              "details": {
+                                               "address": "0x4A907F", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyRun_FileExFlags", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 2146304, 
+                                                "details": {
+                                                 "address": "0x4A930F", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyRun_SimpleFileExFlags", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 2146304, 
+                                                  "details": {
+                                                   "address": "0x4AA8BB", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "Py_Main", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 2146304, 
+                                                    "details": {
+                                                     "address": "0x5DA176B", 
+                                                     "file": "libc-start.c", 
+                                                     "function": "(below main)", 
+                                                     "line": 226
+                                                    }, 
+                                                    "children": []
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }, 
+                           {
+                            "nbytes": 2134016, 
+                            "details": {
+                             "address": "0x5E8678A", 
+                             "file": "nsswitch.c", 
+                             "function": "__nss_lookup", 
+                             "line": 202
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 2134016, 
+                              "details": {
+                               "address": "0x5E3EE16", 
+                               "file": "getXXbyYY_r.c", 
+                               "function": "getpwuid_r@@GLIBC_2.2.5", 
+                               "line": 203
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 2134016, 
+                                "details": {
+                                 "address": "0x5E3E5F1", 
+                                 "file": "getXXbyYY.c", 
+                                 "function": "getpwuid", 
+                                 "line": 117
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 2134016, 
+                                  "details": {
+                                   "address": "0x66EFD6F", 
+                                   "file": "/usr/lib/libsandbox.so.0.3.5", 
+                                   "function": "sandbox_check", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 2134016, 
+                                    "details": {
+                                     "address": "0x64E2D1E", 
+                                     "file": "/usr/local/lib/python2.7/dist-packages/sandbox/_sandbox.so", 
+                                     "function": "Sandbox_new", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 2134016, 
+                                      "details": {
+                                       "address": "0x4DB5E6", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "???", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 2134016, 
+                                        "details": {
+                                         "address": "0x4E9F34", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "PyObject_Call", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 2134016, 
+                                          "details": {
+                                           "address": "0x498468", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "PyEval_EvalFrameEx", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 2134016, 
+                                            "details": {
+                                             "address": "0x49F1BE", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyEval_EvalCodeEx", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 2134016, 
+                                              "details": {
+                                               "address": "0x4A907F", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyRun_FileExFlags", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 2134016, 
+                                                "details": {
+                                                 "address": "0x4A930F", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyRun_SimpleFileExFlags", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 2134016, 
+                                                  "details": {
+                                                   "address": "0x4AA8BB", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "Py_Main", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 2134016, 
+                                                    "details": {
+                                                     "address": "0x5DA176B", 
+                                                     "file": "libc-start.c", 
+                                                     "function": "(below main)", 
+                                                     "line": 226
+                                                    }, 
+                                                    "children": []
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }, 
+                 {
+                  "nbytes": 2142208, 
+                  "details": {
+                   "address": "0x4E44F24", 
+                   "file": "dlopen.c", 
+                   "function": "dlopen_doit", 
+                   "line": 67
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 2142208, 
+                    "details": {
+                     "address": "0x400F174", 
+                     "file": "dl-error.c", 
+                     "function": "_dl_catch_error", 
+                     "line": 178
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 2142208, 
+                      "details": {
+                       "address": "0x4E4552D", 
+                       "file": "dlerror.c", 
+                       "function": "_dlerror_run", 
+                       "line": 164
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 2142208, 
+                        "details": {
+                         "address": "0x4E44FBF", 
+                         "file": "dlopen.c", 
+                         "function": "dlopen@@GLIBC_2.2.5", 
+                         "line": 88
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 2142208, 
+                          "details": {
+                           "address": "0x561838", 
+                           "file": "/usr/bin/python2.7", 
+                           "function": "_PyImport_GetDynLoadFunc", 
+                           "line": null
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 2142208, 
+                            "details": {
+                             "address": "0x47AF17", 
+                             "file": "/usr/bin/python2.7", 
+                             "function": "_PyImport_LoadDynamicModule", 
+                             "line": null
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 2142208, 
+                              "details": {
+                               "address": "0x53D7D9", 
+                               "file": "/usr/bin/python2.7", 
+                               "function": "???", 
+                               "line": null
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 2142208, 
+                                "details": {
+                                 "address": "0x53DCA8", 
+                                 "file": "/usr/bin/python2.7", 
+                                 "function": "???", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 2142208, 
+                                  "details": {
+                                   "address": "0x53E1B1", 
+                                   "file": "/usr/bin/python2.7", 
+                                   "function": "???", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 2142208, 
+                                    "details": {
+                                     "address": "0x4C2E69", 
+                                     "file": "/usr/bin/python2.7", 
+                                     "function": "???", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 2142208, 
+                                      "details": {
+                                       "address": "0x4E9F34", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "PyObject_Call", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 2142208, 
+                                        "details": {
+                                         "address": "0x4EA394", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "PyEval_CallObjectWithKeywords", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 2142208, 
+                                          "details": {
+                                           "address": "0x49A4EB", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "PyEval_EvalFrameEx", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 2142208, 
+                                            "details": {
+                                             "address": "0x49F1BE", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyEval_EvalCodeEx", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 2142208, 
+                                              "details": {
+                                               "address": "0x4A7F16", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyImport_ExecCodeModuleEx", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 2142208, 
+                                                "details": {
+                                                 "address": "0x53CDDF", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "???", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 2142208, 
+                                                  "details": {
+                                                   "address": "0x4A4189", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "???", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 2142208, 
+                                                    "details": {
+                                                     "address": "0x53D7D9", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "???", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 2142208, 
+                                                      "details": {
+                                                       "address": "0x4FC1A1", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "???", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 2142208, 
+                                                        "details": {
+                                                         "address": "0x53E0A2", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "???", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 2142208, 
+                                                          "details": {
+                                                           "address": "0x4C2E69", 
+                                                           "file": "/usr/bin/python2.7", 
+                                                           "function": "???", 
+                                                           "line": null
+                                                          }, 
+                                                          "children": [
+                                                           {
+                                                            "nbytes": 2142208, 
+                                                            "details": {
+                                                             "address": "0x4E9F34", 
+                                                             "file": "/usr/bin/python2.7", 
+                                                             "function": "PyObject_Call", 
+                                                             "line": null
+                                                            }, 
+                                                            "children": [
+                                                             {
+                                                              "nbytes": 2142208, 
+                                                              "details": {
+                                                               "address": "0x4EA394", 
+                                                               "file": "/usr/bin/python2.7", 
+                                                               "function": "PyEval_CallObjectWithKeywords", 
+                                                               "line": null
+                                                              }, 
+                                                              "children": [
+                                                               {
+                                                                "nbytes": 2142208, 
+                                                                "details": {
+                                                                 "address": "0x49A4EB", 
+                                                                 "file": "/usr/bin/python2.7", 
+                                                                 "function": "PyEval_EvalFrameEx", 
+                                                                 "line": null
+                                                                }, 
+                                                                "children": []
+                                                               }
+                                                              ]
+                                                             }
+                                                            ]
+                                                           }
+                                                          ]
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }, 
+           {
+            "nbytes": 2105344, 
+            "details": {
+             "address": "0x400188C", 
+             "file": "rtld.c", 
+             "function": "map_doit", 
+             "line": 633
+            }, 
+            "children": [
+             {
+              "nbytes": 2105344, 
+              "details": {
+               "address": "0x400F174", 
+               "file": "dl-error.c", 
+               "function": "_dl_catch_error", 
+               "line": 178
+              }, 
+              "children": [
+               {
+                "nbytes": 2105344, 
+                "details": {
+                 "address": "0x4000ECD", 
+                 "file": "rtld.c", 
+                 "function": "do_preload", 
+                 "line": 822
+                }, 
+                "children": [
+                 {
+                  "nbytes": 2105344, 
+                  "details": {
+                   "address": "0x4004118", 
+                   "file": "rtld.c", 
+                   "function": "dl_main", 
+                   "line": 1717
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 2105344, 
+                    "details": {
+                     "address": "0x4015B22", 
+                     "file": "dl-sysdep.c", 
+                     "function": "_dl_sysdep_start", 
+                     "line": 244
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 2105344, 
+                      "details": {
+                       "address": "0x4005363", 
+                       "file": "rtld.c", 
+                       "function": "_dl_start", 
+                       "line": 338
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 2105344, 
+                        "details": {
+                         "address": "0x40016B6", 
+                         "file": "/lib/x86_64-linux-gnu/ld-2.15.so", 
+                         "function": "???", 
+                         "line": null
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 2105344, 
+                          "details": {
+                           "address": "0x2", 
+                           "file": null, 
+                           "function": "???", 
+                           "line": null
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 2105344, 
+                            "details": {
+                             "address": "0x7FF0007A5", 
+                             "file": null, 
+                             "function": "???", 
+                             "line": null
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 2105344, 
+                              "details": {
+                               "address": "0x7FF0007AC", 
+                               "file": null, 
+                               "function": "???", 
+                               "line": null
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 2105344, 
+                                "details": {
+                                 "address": "0x7FF0007BB", 
+                                 "file": null, 
+                                 "function": "???", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 2105344, 
+                                  "details": {
+                                   "address": "0x7FF0007BD", 
+                                   "file": null, 
+                                   "function": "???", 
+                                   "line": null
+                                  }, 
+                                  "children": []
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }, 
+       {
+        "nbytes": 4259840, 
+        "details": {
+         "address": "0x4007148", 
+         "file": "dl-load.c", 
+         "function": "_dl_map_object_from_fd", 
+         "line": 1392
+        }, 
+        "children": [
+         {
+          "nbytes": 4259840, 
+          "details": {
+           "address": "0x4008698", 
+           "file": "dl-load.c", 
+           "function": "_dl_map_object", 
+           "line": 2568
+          }, 
+          "children": [
+           {
+            "nbytes": 4259840, 
+            "details": {
+             "address": "0x400CFE0", 
+             "file": "dl-deps.c", 
+             "function": "openaux", 
+             "line": 65
+            }, 
+            "children": [
+             {
+              "nbytes": 4259840, 
+              "details": {
+               "address": "0x400F174", 
+               "file": "dl-error.c", 
+               "function": "_dl_catch_error", 
+               "line": 178
+              }, 
+              "children": [
+               {
+                "nbytes": 4259840, 
+                "details": {
+                 "address": "0x400D6BC", 
+                 "file": "dl-deps.c", 
+                 "function": "_dl_map_object_deps", 
+                 "line": 258
+                }, 
+                "children": [
+                 {
+                  "nbytes": 4202496, 
+                  "details": {
+                   "address": "0x40138A7", 
+                   "file": "dl-open.c", 
+                   "function": "dl_open_worker", 
+                   "line": 262
+                  }, 
+                  "children": [
+                   {
+                    "nbytes": 4202496, 
+                    "details": {
+                     "address": "0x400F174", 
+                     "file": "dl-error.c", 
+                     "function": "_dl_catch_error", 
+                     "line": 178
+                    }, 
+                    "children": [
+                     {
+                      "nbytes": 4202496, 
+                      "details": {
+                       "address": "0x4013318", 
+                       "file": "dl-open.c", 
+                       "function": "_dl_open", 
+                       "line": 639
+                      }, 
+                      "children": [
+                       {
+                        "nbytes": 4194304, 
+                        "details": {
+                         "address": "0x4E44F24", 
+                         "file": "dlopen.c", 
+                         "function": "dlopen_doit", 
+                         "line": 67
+                        }, 
+                        "children": [
+                         {
+                          "nbytes": 4194304, 
+                          "details": {
+                           "address": "0x400F174", 
+                           "file": "dl-error.c", 
+                           "function": "_dl_catch_error", 
+                           "line": 178
+                          }, 
+                          "children": [
+                           {
+                            "nbytes": 4194304, 
+                            "details": {
+                             "address": "0x4E4552D", 
+                             "file": "dlerror.c", 
+                             "function": "_dlerror_run", 
+                             "line": 164
+                            }, 
+                            "children": [
+                             {
+                              "nbytes": 4194304, 
+                              "details": {
+                               "address": "0x4E44FBF", 
+                               "file": "dlopen.c", 
+                               "function": "dlopen@@GLIBC_2.2.5", 
+                               "line": 88
+                              }, 
+                              "children": [
+                               {
+                                "nbytes": 4194304, 
+                                "details": {
+                                 "address": "0x561838", 
+                                 "file": "/usr/bin/python2.7", 
+                                 "function": "_PyImport_GetDynLoadFunc", 
+                                 "line": null
+                                }, 
+                                "children": [
+                                 {
+                                  "nbytes": 4194304, 
+                                  "details": {
+                                   "address": "0x47AF17", 
+                                   "file": "/usr/bin/python2.7", 
+                                   "function": "_PyImport_LoadDynamicModule", 
+                                   "line": null
+                                  }, 
+                                  "children": [
+                                   {
+                                    "nbytes": 4194304, 
+                                    "details": {
+                                     "address": "0x53D7D9", 
+                                     "file": "/usr/bin/python2.7", 
+                                     "function": "???", 
+                                     "line": null
+                                    }, 
+                                    "children": [
+                                     {
+                                      "nbytes": 4194304, 
+                                      "details": {
+                                       "address": "0x53DCA8", 
+                                       "file": "/usr/bin/python2.7", 
+                                       "function": "???", 
+                                       "line": null
+                                      }, 
+                                      "children": [
+                                       {
+                                        "nbytes": 4194304, 
+                                        "details": {
+                                         "address": "0x53E1B1", 
+                                         "file": "/usr/bin/python2.7", 
+                                         "function": "???", 
+                                         "line": null
+                                        }, 
+                                        "children": [
+                                         {
+                                          "nbytes": 4194304, 
+                                          "details": {
+                                           "address": "0x4C2E69", 
+                                           "file": "/usr/bin/python2.7", 
+                                           "function": "???", 
+                                           "line": null
+                                          }, 
+                                          "children": [
+                                           {
+                                            "nbytes": 4194304, 
+                                            "details": {
+                                             "address": "0x4E9F34", 
+                                             "file": "/usr/bin/python2.7", 
+                                             "function": "PyObject_Call", 
+                                             "line": null
+                                            }, 
+                                            "children": [
+                                             {
+                                              "nbytes": 4194304, 
+                                              "details": {
+                                               "address": "0x4EA394", 
+                                               "file": "/usr/bin/python2.7", 
+                                               "function": "PyEval_CallObjectWithKeywords", 
+                                               "line": null
+                                              }, 
+                                              "children": [
+                                               {
+                                                "nbytes": 4194304, 
+                                                "details": {
+                                                 "address": "0x49A4EB", 
+                                                 "file": "/usr/bin/python2.7", 
+                                                 "function": "PyEval_EvalFrameEx", 
+                                                 "line": null
+                                                }, 
+                                                "children": [
+                                                 {
+                                                  "nbytes": 4194304, 
+                                                  "details": {
+                                                   "address": "0x49F1BE", 
+                                                   "file": "/usr/bin/python2.7", 
+                                                   "function": "PyEval_EvalCodeEx", 
+                                                   "line": null
+                                                  }, 
+                                                  "children": [
+                                                   {
+                                                    "nbytes": 4194304, 
+                                                    "details": {
+                                                     "address": "0x4A7F16", 
+                                                     "file": "/usr/bin/python2.7", 
+                                                     "function": "PyImport_ExecCodeModuleEx", 
+                                                     "line": null
+                                                    }, 
+                                                    "children": [
+                                                     {
+                                                      "nbytes": 4194304, 
+                                                      "details": {
+                                                       "address": "0x53CDDF", 
+                                                       "file": "/usr/bin/python2.7", 
+                                                       "function": "???", 
+                                                       "line": null
+                                                      }, 
+                                                      "children": [
+                                                       {
+                                                        "nbytes": 4194304, 
+                                                        "details": {
+                                                         "address": "0x4A4189", 
+                                                         "file": "/usr/bin/python2.7", 
+                                                         "function": "???", 
+                                                         "line": null
+                                                        }, 
+                                                        "children": [
+                                                         {
+                                                          "nbytes": 4194304, 
+                                                          "details": {
+                                                           "address": "0x53D7D9", 
+                                                           "file": "/usr/bin/python2.7", 
+                                                           "function": "???", 
+                                                           "line": null
+                                                          }, 
+                                                          "children": [
+                                                           {
+                                                            "nbytes": 4194304, 
+                                                            "details": {
+                                                             "address": "0x4FC1A1", 
+                                                             "file": "/usr/bin/python2.7", 
+                                                             "function": "???", 
+                                                             "line": null
+                                                            }, 
+                                                            "children": [
+                                                             {
+                                                              "nbytes": 4194304, 
+                                                              "details": {
+                                                               "address": "0x53E0A2", 
+                                                               "file": "/usr/bin/python2.7", 
+                                                               "function": "???", 
+                                                               "line": null
+                                                              }, 
+                                                              "children": [
+                                                               {
+                                                                "nbytes": 4194304, 
+                                                                "details": {
+                                                                 "address": "0x4C2E69", 
+                                                                 "file": "/usr/bin/python2.7", 
+                                                                 "function": "???", 
+                                                                 "line": null
+                                                                }, 
+                                                                "children": []
+                                                               }
+                                                              ]
+                                                             }
+                                                            ]
+                                                           }
+                                                          ]
+                                                         }
+                                                        ]
+                                                       }
+                                                      ]
+                                                     }
+                                                    ]
+                                                   }
+                                                  ]
+                                                 }
+                                                ]
+                                               }
+                                              ]
+                                             }
+                                            ]
+                                           }
+                                          ]
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }, 
+                       {
+                        "nbytes": 8192, 
+                        "details": null, 
+                        "children": []
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }, 
+                 {
+                  "nbytes": 57344, 
+                  "details": null, 
+                  "children": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }, 
+       {
+        "nbytes": 364544, 
+        "details": null, 
+        "children": []
+       }
+      ]
+     }, 
+     {
+      "nbytes": 3239936, 
+      "details": {
+       "address": "0xFFFFFFFFFFFFFFFF", 
+       "file": null, 
+       "function": "???", 
+       "line": null
+      }, 
+      "children": []
+     }, 
+     {
+      "nbytes": 1007616, 
+      "details": null, 
+      "children": []
+     }
+    ], 
+    "details": null
+   }, 
+   "mem_heap": 165990400, 
+   "time": 48657766, 
+   "mem_heap_extra": 0, 
+   "id": 2
+  }, 
+  {
+   "mem_stack": 0, 
+   "heap_tree": null, 
+   "mem_heap": 217128960, 
+   "time": 48657751, 
+   "mem_heap_extra": 0, 
+   "id": 3
+  }
+ ], 
+ "detailed_snapshots_index": [
+  2
+ ]
+}
