@@ -11,7 +11,7 @@ def read(path):
 setup(
     name="msparser",
     py_modules=["msparser"],
-    version="1.3",
+    version="1.4",
     license="MIT",
     description="Valgrind massif.out parser",
     long_description=read("README.rst"),
