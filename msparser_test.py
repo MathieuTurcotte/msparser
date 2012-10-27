@@ -1,8 +1,12 @@
 # Copyright (c) 2011 Mathieu Turcotte
 # Licensed under the MIT license.
 
-from __future__ import with_statement  # Enable with statement in Python 2.5.
-import json
+# Python 2.5 doesn't have the json module.
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 import msparser
 import os
 import sys

@@ -10,6 +10,7 @@ install:
     - pip install pep8 --use-mirrors
     - pip install coverage --use-mirrors
     - "if [[ $TRAVIS_PYTHON_VERSION == *2.[56]* ]]; then pip install unittest2; fi"
+    - "if [[ $TRAVIS_PYTHON_VERSION == *2.5* ]]; then pip install simplejson; fi"
 
 script:
     - pep8 *.py --ignore E501
