@@ -47,19 +47,37 @@ class FakeContext():
 
 class ParseHeaderTest(TestCase):
     def setUp(self):
-        self.ctx = FakeContext([
+        self.ctx = FakeContext()
+        self.mdata = {}
+
+    def parse_header(self, lines, baseline=0):
+        self.ctx.set_content(lines, baseline)
+        msparser._parse_header(self.ctx, self.mdata)
+
+    def test_parse_header(self):
+        self.parse_header([
             "desc: --time-unit=B --pages-as-heap=yes",
             "cmd: ./thompson --log=2 --fastpath",
             "time_unit: B"
         ])
-        self.mdata = {}
-
-    def test_parse_header(self):
-        msparser._parse_header(self.ctx, self.mdata)
         self.assertEqual(self.mdata["desc"],
                          "--time-unit=B --pages-as-heap=yes")
         self.assertEqual(self.mdata["cmd"], "./thompson --log=2 --fastpath")
         self.assertEqual(self.mdata["time_unit"], "B")
+
+    def test_parse_malformed_header(self):
+        lines = [
+            "desc: --time-unit=B --pages-as-heap=yes",
+            "cmd: ./thompson --log=2 --fastpath",
+            "snapshot=1"
+        ]
+
+        try:
+            self.parse_header(lines, 0)
+            self.fail("ParseError should have been thrown.")
+        except msparser.ParseError as err:
+            self.assertEqual(err.line, 3)
+            self.assertEqual(err.filename, self.ctx.filename())
 
 
 class ParseHeapTreeTest(TestCase):
@@ -168,8 +186,8 @@ class ParseSnapshotTest(TestCase):
             "detailed_snapshots_index": []
         }
 
-    def parse_snapshot(self, lines):
-        self.ctx.set_content(lines)
+    def parse_snapshot(self, lines, baseline=0):
+        self.ctx.set_content(lines, baseline)
         return msparser._parse_snapshot(self.ctx, self.mdata)
 
     def test_parse_empty_snapshot(self):
@@ -213,6 +231,23 @@ class ParseSnapshotTest(TestCase):
         self.assertEqual(self.mdata["detailed_snapshots_index"][0], 0)
         self.assertEqual(len(self.mdata["detailed_snapshots_index"]), 1)
         self.assertIsNotNone(self.mdata["snapshots"][0]["heap_tree"])
+
+    def test_parse_malformed_snapshot(self):
+        lines = [
+            "#-----------",
+            "snapshot=1",
+            "#-----------",
+            "time=100279",
+            "foo=30035968",
+            "mem_heap_extra_B=0"
+        ]
+
+        try:
+            self.parse_snapshot(lines, 345)
+            self.fail("ParseError should have been thrown.")
+        except msparser.ParseError as err:
+            self.assertEqual(err.line, 350)
+            self.assertEqual(err.filename, self.ctx.filename())
 
 
 class TestFullParse(TestCase):
