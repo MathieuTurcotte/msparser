@@ -4,7 +4,8 @@ Massif Parser
 A parser for Valgrind massif.out files.
 
 The msparser module offers a simple interface to parse the Valgrind massif.out
-file format, i.e. data files produced by the valgrind heap profiler.
+file format, i.e. data files produced by the valgrind heap profiler, and should
+be compatible with Python 2.5 and up (including 3.x and pypy).
 
 How do I use it?
 ----------------
