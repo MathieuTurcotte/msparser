@@ -196,10 +196,10 @@ class ParseSnapshotTest(TestCase):
 
     def parse_snapshot(self, lines, baseline=0):
         self.ctx.set_content(lines, baseline)
-        return msparser._parse_snapshot(self.ctx, self.mdata)
+        msparser._parse_snapshots(self.ctx, self.mdata)
 
     def test_parse_empty_snapshot(self):
-        success = self.parse_snapshot([
+        self.parse_snapshot([
             "#-----------",
             "snapshot=1",
             "#-----------",
@@ -210,7 +210,6 @@ class ParseSnapshotTest(TestCase):
             "heap_tree=empty"
         ])
 
-        self.assertTrue(success)
         self.assertEqual(len(self.mdata["detailed_snapshots_index"]), 0)
         self.assertEqual(self.mdata["snapshots"][0], {
             "id": 1,
@@ -222,7 +221,7 @@ class ParseSnapshotTest(TestCase):
         })
 
     def test_parse_peak_snapshot(self):
-        success = self.parse_snapshot([
+        self.parse_snapshot([
             "#-----------",
             "snapshot=1",
             "#-----------",
@@ -234,7 +233,6 @@ class ParseSnapshotTest(TestCase):
             "n0: 8192 in 1 place, below massif's threshold (01.00%)"
         ])
 
-        self.assertTrue(success)
         self.assertEqual(self.mdata["peak_snapshot_index"], 0)
         self.assertEqual(self.mdata["detailed_snapshots_index"][0], 0)
         self.assertEqual(len(self.mdata["detailed_snapshots_index"]), 1)

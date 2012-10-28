@@ -114,17 +114,10 @@ def parse(fd):
     """
     Parse an already opened massif output file.
     """
-    ctx = ParseContext(fd)
-
     mdata = {}
-    mdata["snapshots"] = []
-    mdata["detailed_snapshots_index"] = []
-
+    ctx = ParseContext(fd)
     _parse_header(ctx, mdata)
-
-    while _parse_snapshot(ctx, mdata):
-        continue
-
+    _parse_snapshots(ctx, mdata)
     return mdata
 
 
@@ -180,7 +173,31 @@ def _parse_header(ctx, mdata):
     mdata["time_unit"] = _get_next_field(ctx, _FIELD_TIME_UNIT_RE)
 
 
-def _parse_snapshot(ctx, mdata):
+def _parse_snapshots(ctx, mdata):
+    index = 0
+    snapshots = []
+    detailed_snapshot_indices = []
+    peak_snapshot_index = None
+
+    snapshot = _parse_snapshot(ctx)
+
+    while snapshot is not None:
+        if snapshot["is_detailed"]:
+            detailed_snapshot_indices.append(index)
+        if snapshot["is_peak"]:
+            peak_snapshot_index = index
+        snapshots.append(snapshot["data"])
+        snapshot = _parse_snapshot(ctx)
+        index += 1
+
+    mdata["snapshots"] = snapshots
+    mdata["detailed_snapshots_index"] = detailed_snapshot_indices
+
+    if peak_snapshot_index is not None:
+        mdata["peak_snapshot_index"] = peak_snapshot_index
+
+
+def _parse_snapshot(ctx):
     """
     Parse another snapshot, appending it to the mdata["snapshots"] list. On
     EOF, False will be returned.
@@ -188,35 +205,37 @@ def _parse_snapshot(ctx, mdata):
     snapshot_id = _get_next_field(ctx, _FIELD_SNAPSHOT_RE, may_reach_eof=True)
 
     if snapshot_id is None:
-        return False
+        return None
 
     snapshot_id = int(snapshot_id)
     time = int(_get_next_field(ctx, _FIELD_TIME_RE))
     mem_heap = int(_get_next_field(ctx, _FIELD_MEM_HEAP_RE))
     mem_heap_extra = int(_get_next_field(ctx, _FIELD_MEM_EXTRA_RE))
     mem_stacks = int(_get_next_field(ctx, _FIELD_MEM_STACK_RE))
-    heap_tree = _get_next_field(ctx, _FIELD_HEAP_TREE_RE)
+    heap_tree_field = _get_next_field(ctx, _FIELD_HEAP_TREE_RE)
 
-    # Handle the heap_tree field.
-    if heap_tree != "empty":
-        snapshot_index = len(mdata["snapshots"])
-        if heap_tree == "peak":
-            mdata["peak_snapshot_index"] = snapshot_index
+    heap_tree = None
+    is_detailed = False
+    is_peak = False
+
+    if heap_tree_field != "empty":
+        is_detailed = True
+        if heap_tree_field == "peak":
+            is_peak = True
         heap_tree = _parse_heap_tree(ctx)
-        mdata["detailed_snapshots_index"].append(snapshot_index)
-    else:
-        heap_tree = None
 
-    mdata["snapshots"].append({
-        "id": snapshot_id,
-        "time": time,
-        "mem_heap": mem_heap,
-        "mem_heap_extra": mem_heap_extra,
-        "mem_stack": mem_stacks,
-        "heap_tree": heap_tree
-    })
-
-    return True
+    return {
+        "is_detailed": is_detailed,
+        "is_peak": is_peak,
+        "data": {
+            "id": snapshot_id,
+            "time": time,
+            "mem_heap": mem_heap,
+            "mem_heap_extra": mem_heap_extra,
+            "mem_stack": mem_stacks,
+            "heap_tree": heap_tree
+        }
+    }
 
 
 def _parse_heap_tree(ctx):
