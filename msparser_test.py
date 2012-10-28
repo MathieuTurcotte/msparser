@@ -1,6 +1,10 @@
 # Copyright (c) 2011 Mathieu Turcotte
 # Licensed under the MIT license.
 
+# Enable with statement in Python 2.5.
+# This has to be the first statement.
+from __future__ import with_statement
+
 # Python 2.5 doesn't have the json module.
 try:
     import json
@@ -263,7 +267,8 @@ class TestFullParse(TestCase):
 def make_parse_test(path_to_actual, path_to_expected):
     def test_parse(self):
         actual = msparser.parse_file(path_to_actual)
-        expected = json.load(open(path_to_expected))
+        with open(path_to_expected) as fd_to_expected:
+            expected = json.load(fd_to_expected)
         self.assertEqual(expected, actual)
     return test_parse
 
