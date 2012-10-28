@@ -13,6 +13,7 @@ except ImportError:
 
 import msparser
 import os
+import os.path
 import sys
 
 # Use unittest2 on versions older than Python 2.7.
@@ -275,7 +276,7 @@ def make_parse_test(path_to_actual, path_to_expected):
 
 for filename in os.listdir("test_data"):
     if not filename.endswith("json"):
-        path_to_actual = "test_data/" + filename
+        path_to_actual = os.path.join("test_data", filename)
         path_to_expected = path_to_actual + ".json"
         test_name = "test" + filename.replace(".", "_")
         test_function = make_parse_test(path_to_actual, path_to_expected)
