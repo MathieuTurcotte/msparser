@@ -1,7 +1,7 @@
 {
  "peak_snapshot_index": 34, 
  "desc": "--time-unit=i", 
- "detailed_snapshots_index": [
+ "detailed_snapshot_indices": [
   7, 
   9, 
   10, 

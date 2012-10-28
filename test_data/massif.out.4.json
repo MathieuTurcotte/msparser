@@ -1,6 +1,6 @@
 {
  "cmd": "./memory-run", 
- "detailed_snapshots_index": [
+ "detailed_snapshot_indices": [
   9, 
   14, 
   18, 

@@ -191,7 +191,7 @@ def _parse_snapshots(ctx, mdata):
         index += 1
 
     mdata["snapshots"] = snapshots
-    mdata["detailed_snapshots_index"] = detailed_snapshot_indices
+    mdata["detailed_snapshot_indices"] = detailed_snapshot_indices
 
     if peak_snapshot_index is not None:
         mdata["peak_snapshot_index"] = peak_snapshot_index

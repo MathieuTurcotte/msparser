@@ -3982,7 +3982,7 @@
   }
  ], 
  "cmd": "./thompson", 
- "detailed_snapshots_index": [
+ "detailed_snapshot_indices": [
   13
  ], 
  "time_unit": "B", 

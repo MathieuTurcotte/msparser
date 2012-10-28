@@ -1917,7 +1917,7 @@
  ], 
  "cmd": "./memory-run", 
  "peak_snapshot_index": 39, 
- "detailed_snapshots_index": [
+ "detailed_snapshot_indices": [
   6, 
   7, 
   9, 

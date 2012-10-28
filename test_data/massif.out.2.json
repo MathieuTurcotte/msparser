@@ -645,7 +645,7 @@
    "mem_heap_extra": 96
   }
  ], 
- "detailed_snapshots_index": [
+ "detailed_snapshot_indices": [
   23
  ], 
  "cmd": "./thompson", 

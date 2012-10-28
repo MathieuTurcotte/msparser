@@ -36,12 +36,12 @@ format. It looks like this::
     >>> pprint(data, depth=1)
     {'cmd': './a.out',
      'desc': '--time-unit=ms',
-     'detailed_snapshots_index': [...],
+     'detailed_snapshot_indices': [...],
      'peak_snapshot_index': 16,
      'snapshots': [...],
      'time_unit': 'ms'}
 
-The ``detailed_snapshots_index`` and ``peak_snapshot_index`` fields allow
+The ``detailed_snapshot_indices`` and ``peak_snapshot_index`` fields allow
 efficient localisation of the detailled and peak snapshots in the ``snapshots``
 list. For example, to retrieve the peak snapshot from the ``snapshots`` list,
 we could do::

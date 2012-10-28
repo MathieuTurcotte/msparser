@@ -191,7 +191,7 @@ class ParseSnapshotTest(TestCase):
         self.ctx = FakeContext()
         self.mdata = {
             "snapshots": [],
-            "detailed_snapshots_index": []
+            "detailed_snapshot_indices": []
         }
 
     def parse_snapshot(self, lines, baseline=0):
@@ -210,7 +210,7 @@ class ParseSnapshotTest(TestCase):
             "heap_tree=empty"
         ])
 
-        self.assertEqual(len(self.mdata["detailed_snapshots_index"]), 0)
+        self.assertEqual(len(self.mdata["detailed_snapshot_indices"]), 0)
         self.assertEqual(self.mdata["snapshots"][0], {
             "id": 1,
             "time": 100279,
@@ -234,8 +234,8 @@ class ParseSnapshotTest(TestCase):
         ])
 
         self.assertEqual(self.mdata["peak_snapshot_index"], 0)
-        self.assertEqual(self.mdata["detailed_snapshots_index"][0], 0)
-        self.assertEqual(len(self.mdata["detailed_snapshots_index"]), 1)
+        self.assertEqual(self.mdata["detailed_snapshot_indices"][0], 0)
+        self.assertEqual(len(self.mdata["detailed_snapshot_indices"]), 1)
         self.assertIsNotNone(self.mdata["snapshots"][0]["heap_tree"])
 
     def test_parse_malformed_snapshot(self):
